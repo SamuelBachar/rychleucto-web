@@ -59,8 +59,13 @@
     .hero {
       background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 40%, #EEF2FF 100%);
       padding: 80px 24px 100px;
-      text-align: center;
     }
+    .hero-inner {
+      max-width: 1180px; margin: 0 auto;
+      display: grid; grid-template-columns: 0.85fr 1.15fr;
+      align-items: center; gap: 56px;
+    }
+    .hero-text { display: flex; flex-direction: column; align-items: flex-start; }
     .hero-badge {
       display: inline-flex; align-items: center; gap: 6px;
       background: white; border: 1px solid var(--border);
@@ -69,33 +74,24 @@
       margin-bottom: 24px;
     }
     .hero h1 {
-      font-size: clamp(36px, 6vw, 64px);
+      font-size: clamp(32px, 4.5vw, 56px);
       font-weight: 900; line-height: 1.1;
-      color: var(--text); max-width: 800px; margin: 0 auto 20px;
+      color: var(--text); margin: 0 0 20px;
     }
     .hero h1 span { color: var(--primary); }
     .hero p {
-      font-size: 18px; color: var(--text-sec);
-      max-width: 560px; margin: 0 auto 36px; line-height: 1.7;
+      font-size: 17px; color: var(--text-sec);
+      margin: 0 0 36px; line-height: 1.7;
     }
-    .hero-cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-    .hero-phones {
-      margin-top: 60px;
-      display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;
+    .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; }
+    .hero-image { display: flex; justify-content: center; align-items: center; }
+    .hero-image img {
+      width: 100%; max-width: 680px; height: auto;
+      display: block;
+      border-radius: 24px;
+      border: 1px solid rgba(255,255,255,.6);
+      box-shadow: 0 30px 60px rgba(26,86,219,.2);
     }
-    .phone-mockup {
-      background: white; border: 2px solid var(--border);
-      border-radius: 28px; padding: 20px 16px;
-      width: 200px; box-shadow: 0 20px 40px rgba(0,0,0,.08);
-    }
-    .phone-screen {
-      background: var(--card); border-radius: 16px;
-      height: 320px; display: flex; flex-direction: column;
-      align-items: center; justify-content: center; gap: 12px;
-      font-size: 13px; color: var(--text-sec);
-    }
-    .phone-screen .icon { font-size: 40px; }
-    .phone-screen strong { font-size: 15px; color: var(--text); font-weight: 700; }
 
     /* SECTION */
     section { padding: 80px 24px; }
@@ -183,6 +179,8 @@
 
     @media (max-width: 768px) {
       .nav-links { display: none; }
+      .hero-inner { grid-template-columns: 1fr; text-align: center; gap: 40px; }
+      .hero-text { align-items: center; }
       .footer-top { grid-template-columns: 1fr; gap: 32px; }
       .footer-bottom { flex-direction: column; text-align: center; }
     }
@@ -207,33 +205,42 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-badge">🇸🇰 Vyvinuté na Slovensku</div>
-  <h1>Účtovníctvo za<br/><span>60 sekúnd</span> mesačne</h1>
-  <p>Odfotografujte faktúry a bločky, aplikácia ich automaticky spracuje a pošle účtovnej firme. Žiadna administratíva, žiadny stres.</p>
-  <div class="hero-cta">
-    <a href="#download" class="btn btn-primary btn-lg">📱 Stiahnuť z Google Play</a>
-    <a href="#ako-to-funguje" class="btn btn-outline btn-lg">Ako to funguje?</a>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-badge">🇸🇰 Vyvinuté na Slovensku</div>
+      <h1>Účtovníctvo za<br/><span>60 sekúnd</span> mesačne</h1>
+      <p>Odfotografujte faktúry a bločky, aplikácia ich automaticky spracuje a pošle účtovnej firme. Žiadna administratíva, žiadny stres.</p>
+      <div class="hero-cta">
+        <a href="#download" class="btn btn-primary btn-lg">📱 Stiahnuť z Google Play</a>
+        <a href="#ako-to-funguje" class="btn btn-outline btn-lg">Ako to funguje?</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="hero.png" alt="RýchleÚčto aplikácia — skenovanie dokladu a automatické rozpoznanie údajov" loading="eager" />
+    </div>
   </div>
-  <div class="hero-phones">
-    <div class="phone-mockup">
-      <div class="phone-screen">
-        <div class="icon">📸</div>
-        <strong>Odfotiť doklad</strong>
-        <div>Faktúra, bloček, paragon</div>
+</section>
+
+<!-- HOW -->
+<section id="ako-to-funguje" class="how-bg">
+  <div class="section-inner">
+    <div class="section-label">Ako to funguje</div>
+    <h2 class="section-title">Tri jednoduché kroky</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Odfotografujte doklad</h3>
+        <p>Faktúru, bloček alebo paragon. Veľkú faktúru? Spravte viac fotiek po častiach. Alebo naskenujte QR kód z eKasy.</p>
       </div>
-    </div>
-    <div class="phone-mockup">
-      <div class="phone-screen">
-        <div class="icon">⚡</div>
-        <strong>Automatické spracovanie</strong>
-        <div>OCR + eKasa integrácia</div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Skontrolujte a potvrďte</h3>
+        <p>Aplikácia automaticky rozpozná dodávateľa, sumu a dátum. Vy len rýchlo skontrolujete a potvrdíte.</p>
       </div>
-    </div>
-    <div class="phone-mockup">
-      <div class="phone-screen">
-        <div class="icon">📤</div>
-        <strong>Odoslať účtovnej firme</strong>
-        <div>ZIP s PDF, CSV a originálmi</div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Odošlite účtovnej firme</h3>
+        <p>Koncom mesiaca jedným kliknutím odošlete všetky doklady. Email sa otvorí automaticky s prílohou pripravený na odoslanie.</p>
       </div>
     </div>
   </div>
@@ -275,31 +282,6 @@
         <div class="feature-icon">🔒</div>
         <h3>100% offline &amp; súkromné</h3>
         <p>Všetky dáta ostávajú v telefóne. Žiadny cloud, žiadna registrácia, žiadne zdieľanie s tretími stranami.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- HOW -->
-<section id="ako-to-funguje" class="how-bg">
-  <div class="section-inner">
-    <div class="section-label">Ako to funguje</div>
-    <h2 class="section-title">Tri jednoduché kroky</h2>
-    <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <h3>Odfotografujte doklad</h3>
-        <p>Faktúru, bloček alebo paragon. Veľkú faktúru? Spravte viac fotiek po častiach. Alebo naskenujte QR kód z eKasy.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <h3>Skontrolujte a potvrďte</h3>
-        <p>Aplikácia automaticky rozpozná dodávateľa, sumu a dátum. Vy len rýchlo skontrolujete a potvrdíte.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <h3>Odošlite účtovnej firme</h3>
-        <p>Koncom mesiaca jedným kliknutím odošlete všetky doklady. Email sa otvorí automaticky s prílohou pripravený na odoslanie.</p>
       </div>
     </div>
   </div>
