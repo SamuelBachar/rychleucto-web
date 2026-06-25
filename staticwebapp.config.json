@@ -1,0 +1,16 @@
+{
+  "routes": [
+    {
+      "route": "/privacy",
+      "rewrite": "/privacy.html"
+    },
+    {
+      "route": "/terms",
+      "rewrite": "/terms.html"
+    }
+  ],
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": ["*.html", "*.css", "*.js", "*.png", "*.jpg", "*.svg"]
+  }
+}
