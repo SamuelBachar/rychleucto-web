@@ -84,6 +84,9 @@
       margin: 0 0 36px; line-height: 1.7;
     }
     .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; }
+    .store-buttons { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+    .btn-app-store { background: #111827; color: white; }
+    .btn-app-store:hover { background: #000; transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,.25); }
     .hero-image { display: flex; justify-content: center; align-items: center; }
     .hero-image img {
       width: 100%; max-width: 680px; height: auto;
@@ -211,7 +214,8 @@
       <h1>Účtovníctvo za<br/><span>60 sekúnd</span> mesačne</h1>
       <p>Odfotografujte faktúry a bločky, aplikácia ich automaticky spracuje a pošle účtovnej firme. Žiadna administratíva, žiadny stres.</p>
       <div class="hero-cta">
-        <a href="#download" class="btn btn-primary btn-lg">📱 Stiahnuť z Google Play</a>
+        <a href="https://play.google.com/store/apps/details?id=sk.rychleucto.rychleucto" class="btn btn-primary btn-lg">📱 Stiahnuť z Google Play (Android)</a>
+        <a href="https://apps.apple.com/sk/app/rychleucto/id0000000000" class="btn btn-app-store btn-lg">🍎 Stiahnuť z App Store (iPhone)</a>
         <a href="#ako-to-funguje" class="btn btn-outline btn-lg">Ako to funguje?</a>
       </div>
     </div>
@@ -271,12 +275,12 @@
       <div class="feature-card">
         <div class="feature-icon">📤</div>
         <h3>Export pre účtovníka</h3>
-        <p>Jedným kliknutím odošlete mesačný balík — ZIP s CSV reportom, PDF prehľadom a originálnymi fotografiami.</p>
+        <p>Jedným kliknutím odošlete mesačný balík — ZIP s PDF prehľadom (tabuľka), CSV report, XML export a originálnymi fotografiami použitými pri skenovaní.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">🗂️</div>
-        <h3>Pohoda XML export</h3>
-        <p>Exportujte doklady priamo do formátu pre účtovný softvér Pohoda. Vrátane QR kódov pre ďalšie spracovanie.</p>
+        <h3>Pohoda a Money S3 XML export</h3>
+        <p>Exportujte doklady priamo do formátu pre účtovný softvér Pohoda alebo Money S3.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">🔒</div>
@@ -296,13 +300,13 @@
     <div class="pricing-grid">
       <div class="pricing-card">
         <div class="pricing-name">Trial</div>
-        <div class="pricing-price">0€ <span>/ 40 dní</span></div>
-        <div class="pricing-desc">Plný prístup ku všetkým funkciám po dobu 40 dní.</div>
+        <div class="pricing-price">0€ <span>/ 30 dní</span></div>
+        <div class="pricing-desc">Plný prístup ku všetkým funkciám po dobu 30 dní.</div>
         <ul class="pricing-features">
           <li>Neobmedzené skenovanie dokladov</li>
           <li>OCR + eKasa integrácia</li>
           <li>Export pre účtovníka</li>
-          <li>Pohoda XML export</li>
+          <li>Pohoda a Money S3 XML export</li>
         </ul>
         <a href="#download" class="btn btn-outline" style="width:100%;justify-content:center;">Vyskúšať zadarmo</a>
       </div>
@@ -316,8 +320,9 @@
           <li>Neobmedzené využívanie</li>
           <li>Budúce aktualizácie zadarmo</li>
           <li>Platba cez Google Play</li>
+          <li>Platba cez App Store</li>
         </ul>
-        <a href="#download" class="btn btn-primary" style="width:100%;justify-content:center;">Začať — 40 dní zadarmo</a>
+        <a href="#download" class="btn btn-primary" style="width:100%;justify-content:center;">Začať — 30 dní zadarmo</a>
       </div>
     </div>
   </div>
@@ -343,7 +348,7 @@
       </div>
       <div class="faq-item">
         <div class="faq-q">Ako prebieha platba? <span>+</span></div>
-        <div class="faq-a">Platba prebieha cez Google Play — tou istou platobnou kartou, ktorú máte nastavenú v Google účte. Predplatné môžete kedykoľvek zrušiť.</div>
+        <div class="faq-a">Platba prebieha cez Google Play alebo App Store — tou istou platobnou kartou, ktorú máte nastavenú vo vašom účte. Predplatné môžete kedykoľvek zrušiť.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">Podporuje aplikácia česky? <span>+</span></div>
@@ -356,10 +361,15 @@
 <!-- CTA -->
 <section class="cta-section" id="download">
   <h2>Začnite používať RýchleÚčto dnes</h2>
-  <p>40 dní zadarmo. Žiadna registrácia. Žiadna kreditná karta.</p>
-  <a href="https://play.google.com/store/apps/details?id=sk.rychleucto.rychleucto" class="btn btn-white btn-lg">
-    📱 Stiahnuť z Google Play
-  </a>
+  <p>30 dní zadarmo. Žiadna registrácia. Žiadna kreditná karta.</p>
+  <div class="store-buttons">
+    <a href="https://play.google.com/store/apps/details?id=sk.rychleucto.rychleucto" class="btn btn-white btn-lg">
+      📱 Stiahnuť z Google Play (Android)
+    </a>
+    <a href="https://apps.apple.com/sk/app/rychleucto/id0000000000" class="btn btn-white btn-lg" style="color:#111827;">
+      🍎 Stiahnuť z App Store (iPhone)
+    </a>
+  </div>
 </section>
 
 <!-- FOOTER -->
