@@ -4,6 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Zásady ochrany súkromia — RýchleÚčto</title>
+  <link rel="alternate" hreflang="sk" href="https://www.rychleucto.sk/privacy.html" />
+  <link rel="alternate" hreflang="cs" href="https://www.rychleucto.sk/cz/privacy.html" />
+  <link rel="alternate" hreflang="de" href="https://www.rychleucto.sk/de/privacy.html" />
+  <link rel="alternate" hreflang="en" href="https://www.rychleucto.sk/en/privacy.html" />
+  <link rel="alternate" hreflang="x-default" href="https://www.rychleucto.sk/privacy.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
@@ -11,10 +16,13 @@
     :root { --primary: #1A56DB; --text: #111827; --text-sec: #6B7280; --border: #E5E7EB; --card: #F9FAFB; }
     body { font-family: 'Inter', sans-serif; color: var(--text); background: #fff; line-height: 1.7; }
     nav { border-bottom: 1px solid var(--border); padding: 0 24px; }
-    .nav-inner { max-width: 800px; margin: 0 auto; display: flex; align-items: center; height: 60px; justify-content: space-between; }
+    .nav-inner { max-width: 800px; margin: 0 auto; display: flex; align-items: center; height: 60px; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
     .nav-logo { font-size: 18px; font-weight: 800; color: var(--primary); text-decoration: none; }
     .nav-back { font-size: 14px; color: var(--text-sec); text-decoration: none; }
     .nav-back:hover { color: var(--primary); }
+    .lang-mini { display: flex; gap: 8px; font-size: 13px; }
+    .lang-mini a { color: var(--text-sec); text-decoration: none; }
+    .lang-mini a.active { color: var(--primary); font-weight: 700; }
     .container { max-width: 800px; margin: 0 auto; padding: 60px 24px 80px; }
     h1 { font-size: 36px; font-weight: 800; margin-bottom: 8px; }
     .updated { font-size: 14px; color: var(--text-sec); margin-bottom: 40px; }
@@ -28,6 +36,8 @@
     }
     .highlight p { margin: 0; font-weight: 500; color: var(--primary); }
     footer { border-top: 1px solid var(--border); padding: 32px 24px; text-align: center; font-size: 13px; color: var(--text-sec); }
+    footer a { color: inherit; }
+
   </style>
 </head>
 <body>
@@ -35,16 +45,17 @@
 <nav>
   <div class="nav-inner">
     <a href="/" class="nav-logo">RýchleÚčto</a>
+    <div class="lang-mini"><a href="/privacy.html" class="active">SK</a><a href="/cz/privacy.html">CZ</a><a href="/de/privacy.html">DE</a><a href="/en/privacy.html">EN</a></div>
     <a href="/" class="nav-back">← Späť na hlavnú stránku</a>
   </div>
 </nav>
 
 <div class="container">
   <h1>Zásady ochrany súkromia</h1>
-  <div class="updated">Posledná aktualizácia: 25. júna 2026</div>
+  <div class="updated">Posledná aktualizácia: 20. júla 2026</div>
 
   <div class="highlight">
-    <p>🔒 RýchleÚčto ukladá všetky vaše dáta výlučne lokálne v telefóne. Neposielajú sa žiadne osobné údaje na naše servery ani tretím stranám.</p>
+    <p>RýchleÚčto ukladá všetky vaše dáta výlučne lokálne v telefóne. Neposielajú sa žiadne osobné údaje na naše servery ani tretím stranám.</p>
   </div>
 
   <h2>1. Prevádzkovateľ</h2>
@@ -58,8 +69,9 @@
   <ul>
     <li><strong>Fotografie dokladov</strong> — faktúry, bločky a paragóny, ktoré používateľ odfotografuje alebo nahrá</li>
     <li><strong>Rozpoznaný text</strong> — výsledky OCR spracovania fotografií (názov dodávateľa, suma, dátum, IČO)</li>
-    <li><strong>Nastavenia aplikácie</strong> — názov firmy alebo živnosti, meno, priezvisko a email účtovnej firmy</li>
+    <li><strong>Nastavenia aplikácie</strong> — názov firmy alebo živnosti, email účtovnej firmy, jazyk a formát dátumu</li>
     <li><strong>História dokladov</strong> — záznamy spracovaných dokladov uložené v lokálnej databáze</li>
+    <li><strong>Stav predplatného</strong> — informácia o skúšobnej dobe a predplatnom spravovaná cez Apple App Store / Google Play</li>
   </ul>
 
   <h2>3. Kde sú dáta uložené</h2>
@@ -67,24 +79,25 @@
   <p>Dáta sú uložené v:</p>
   <ul>
     <li>Lokálnej SQLite databáze aplikácie</li>
-    <li>Lokálnom úložisku súborov telefónu (fotografie)</li>
-    <li>SharedPreferences (nastavenia aplikácie)</li>
+    <li>Lokálnom úložisku súborov telefónu (fotografie a exporty)</li>
+    <li>SharedPreferences / UserDefaults (nastavenia aplikácie)</li>
   </ul>
 
   <h2>4. Zdieľanie dát s tretími stranami</h2>
   <p>Aplikácia komunikuje s nasledovnými externými službami:</p>
   <ul>
-    <li><strong>Finančná správa SR (eKasa API)</strong> — pri skenovaní QR kódu z bločku sa odošle identifikátor dokladu na overenie. Táto komunikácia prebieha priamo so štátnym systémom, neobsahuje žiadne osobné údaje používateľa.</li>
+    <li><strong>Finančná správa SR (eKasa API)</strong> — pri skenovaní QR kódu z bločku sa odošle identifikátor dokladu na overenie. Táto komunikácia prebieha priamo so štátnym systémom a neobsahuje osobné údaje používateľa.</li>
     <li><strong>Email klient zariadenia</strong> — pri odoslaní mesačného balíka sa otvorí emailový klient s pripravenou správou. Odoslanie emailu je plne v réžii používateľa.</li>
+    <li><strong>Apple App Store / Google Play</strong> — platby a správa predplatného prebiehajú cez obchod s aplikáciami. Joy IT Solution s.r.o. neprijíma ani neukladá údaje o platobnej karte.</li>
   </ul>
-  <p>Aplikácia <strong>neposiela žiadne dáta</strong> spoločnosti Joy IT Solution s.r.o. ani iným tretím stranám.</p>
+  <p>Aplikácia <strong>neposiela žiadne osobné údaje</strong> spoločnosti Joy IT Solution s.r.o. ani analytickým / reklamným tretím stranám.</p>
 
   <h2>5. Oprávnenia aplikácie</h2>
   <p>Aplikácia požaduje nasledovné oprávnenia:</p>
   <ul>
     <li><strong>Kamera</strong> — na fotografovanie dokladov</li>
     <li><strong>Úložisko / Galéria</strong> — na nahrávanie existujúcich fotografií a PDF súborov</li>
-    <li><strong>Internet</strong> — na overenie QR kódov eKasa cez API Finančnej správy SR</li>
+    <li><strong>Internet</strong> — na overenie QR kódov eKasa a na nákup / obnovu predplatného</li>
   </ul>
 
   <h2>6. Vymazanie dát</h2>
@@ -103,11 +116,13 @@
   <h2>9. Kontakt</h2>
   <p>Ak máte otázky týkajúce sa ochrany súkromia, kontaktujte nás:</p>
   <p>📧 <a href="mailto:joyitsolutionsro@gmail.com">joyitsolutionsro@gmail.com</a></p>
+
 </div>
 
 <footer>
   © 2026 RýchleÚčto — Joy IT Solution s.r.o. &nbsp;|&nbsp;
-  <a href="/" style="color:inherit;">Hlavná stránka</a>
+  <a href="/">Hlavná stránka</a> &nbsp;|&nbsp;
+  <a href="terms.html">Obchodné podmienky</a>
 </footer>
 
 </body>

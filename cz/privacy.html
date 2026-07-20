@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zásady ochrany soukromí — RychléÚčto</title>
+  <link rel="alternate" hreflang="sk" href="https://www.rychleucto.sk/privacy.html" />
+  <link rel="alternate" hreflang="cs" href="https://www.rychleucto.sk/cz/privacy.html" />
+  <link rel="alternate" hreflang="de" href="https://www.rychleucto.sk/de/privacy.html" />
+  <link rel="alternate" hreflang="en" href="https://www.rychleucto.sk/en/privacy.html" />
+  <link rel="alternate" hreflang="x-default" href="https://www.rychleucto.sk/privacy.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --primary: #1A56DB; --text: #111827; --text-sec: #6B7280; --border: #E5E7EB; --card: #F9FAFB; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); background: #fff; line-height: 1.7; }
+    nav { border-bottom: 1px solid var(--border); padding: 0 24px; }
+    .nav-inner { max-width: 800px; margin: 0 auto; display: flex; align-items: center; height: 60px; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+    .nav-logo { font-size: 18px; font-weight: 800; color: var(--primary); text-decoration: none; }
+    .nav-back { font-size: 14px; color: var(--text-sec); text-decoration: none; }
+    .nav-back:hover { color: var(--primary); }
+    .lang-mini { display: flex; gap: 8px; font-size: 13px; }
+    .lang-mini a { color: var(--text-sec); text-decoration: none; }
+    .lang-mini a.active { color: var(--primary); font-weight: 700; }
+    .container { max-width: 800px; margin: 0 auto; padding: 60px 24px 80px; }
+    h1 { font-size: 36px; font-weight: 800; margin-bottom: 8px; }
+    .updated { font-size: 14px; color: var(--text-sec); margin-bottom: 40px; }
+    h2 { font-size: 20px; font-weight: 700; margin: 36px 0 12px; color: var(--text); }
+    p { font-size: 15px; color: #374151; margin-bottom: 16px; }
+    ul { margin: 0 0 16px 20px; }
+    ul li { font-size: 15px; color: #374151; margin-bottom: 8px; line-height: 1.6; }
+    .highlight {
+      background: #EFF6FF; border: 1px solid #BFDBFE; border-radius: 12px;
+      padding: 20px 24px; margin: 24px 0;
+    }
+    .highlight p { margin: 0; font-weight: 500; color: var(--primary); }
+    footer { border-top: 1px solid var(--border); padding: 32px 24px; text-align: center; font-size: 13px; color: var(--text-sec); }
+    footer a { color: inherit; }
+
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="/cz/" class="nav-logo">RychléÚčto</a>
+    <div class="lang-mini"><a href="/privacy.html">SK</a><a href="/cz/privacy.html" class="active">CZ</a><a href="/de/privacy.html">DE</a><a href="/en/privacy.html">EN</a></div>
+    <a href="/cz/" class="nav-back">← Zpět na hlavní stránku</a>
+  </div>
+</nav>
+
+<div class="container">
+  <h1>Zásady ochrany soukromí</h1>
+  <div class="updated">Poslední aktualizace: 20. července 2026</div>
+
+  <div class="highlight">
+    <p>RychléÚčto ukládá všechna vaše data výhradně lokálně v telefonu. Neodesílají se žádné osobní údaje na naše servery ani třetím stranám.</p>
+  </div>
+
+  <h2>1. Provozovatel</h2>
+  <p>Provozovatelem aplikace RychléÚčto je:</p>
+  <p><strong>Joy IT Solution s.r.o.</strong><br/>
+  Slovenská republika<br/>
+  Email: <a href="mailto:joyitsolutionsro@gmail.com">joyitsolutionsro@gmail.com</a></p>
+
+  <h2>2. Jaká data aplikace používá</h2>
+  <p>Aplikace RychléÚčto pracuje s následujícími typy dat:</p>
+  <ul>
+    <li><strong>Fotografie dokladů</strong> — faktury a účtenky, které uživatel vyfotí nebo nahraje</li>
+    <li><strong>Rozpoznaný text</strong> — výsledky OCR zpracování fotografií (název dodavatele, částka, datum, IČO)</li>
+    <li><strong>Nastavení aplikace</strong> — název firmy nebo živnosti, e-mail účetní firmy, jazyk a formát data</li>
+    <li><strong>Historie dokladů</strong> — záznamy zpracovaných dokladů uložené v lokální databázi</li>
+    <li><strong>Stav předplatného</strong> — informace o zkušební době a předplatném spravovaná přes Apple App Store / Google Play</li>
+  </ul>
+
+  <h2>3. Kde jsou data uložena</h2>
+  <p><strong>Všechna data jsou uložena výhradně lokálně v telefonu uživatele.</strong> Aplikace nepoužívá cloudové úložiště, server ani vzdálenou databázi provozovanou společností Joy IT Solution s.r.o.</p>
+  <p>Data jsou uložena v:</p>
+  <ul>
+    <li>Lokální SQLite databázi aplikace</li>
+    <li>Lokálním úložišti souborů telefonu (fotografie a exporty)</li>
+    <li>SharedPreferences / UserDefaults (nastavení aplikace)</li>
+  </ul>
+
+  <h2>4. Sdílení dat s třetími stranami</h2>
+  <p>Aplikace komunikuje s následujícími externími službami:</p>
+  <ul>
+    <li><strong>Finanční správa SR (eKasa API)</strong> — při skenování QR kódu z účtenky se odešle identifikátor dokladu k ověření. Komunikace probíhá přímo se státním systémem a neobsahuje osobní údaje uživatele.</li>
+    <li><strong>E-mailový klient zařízení</strong> — při odeslání měsíčního balíčku se otevře e-mailový klient s připravenou zprávou. Odeslání je plně v režii uživatele.</li>
+    <li><strong>Apple App Store / Google Play</strong> — platby a správa předplatného probíhají přes obchod s aplikacemi. Joy IT Solution s.r.o. nepřijímá ani neukládá údaje o platební kartě.</li>
+  </ul>
+  <p>Aplikace <strong>neodesílá žádné osobní údaje</strong> společnosti Joy IT Solution s.r.o. ani analytickým / reklamním třetím stranám.</p>
+
+  <h2>5. Oprávnění aplikace</h2>
+  <ul>
+    <li><strong>Kamera</strong> — fotografování dokladů</li>
+    <li><strong>Úložiště / Galerie</strong> — nahrávání existujících fotografií a PDF</li>
+    <li><strong>Internet</strong> — ověření QR kódů eKasa a nákup / obnova předplatného</li>
+  </ul>
+
+  <h2>6. Výmaz dat</h2>
+  <ul>
+    <li>Přímo v aplikaci (výběr a smazání dokladů)</li>
+    <li>Odinstalací aplikace — všechna lokální data budou trvale smazána</li>
+  </ul>
+
+  <h2>7. Děti</h2>
+  <p>Aplikace je určena výhradně osobám starším 18 let (podnikatelům). Vědomě neshromažďujeme informace od dětí.</p>
+
+  <h2>8. Změny zásad</h2>
+  <p>O podstatných změnách budeme informovat aktualizací aplikace nebo na této stránce.</p>
+
+  <h2>9. Kontakt</h2>
+  <p>📧 <a href="mailto:joyitsolutionsro@gmail.com">joyitsolutionsro@gmail.com</a></p>
+
+</div>
+
+<footer>
+  © 2026 RychléÚčto — Joy IT Solution s.r.o. &nbsp;|&nbsp;
+  <a href="/cz/">Hlavní stránka</a> &nbsp;|&nbsp;
+  <a href="terms.html">Obchodní podmínky</a>
+</footer>
+
+</body>
+</html>

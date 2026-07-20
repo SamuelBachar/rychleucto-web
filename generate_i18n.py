@@ -459,7 +459,7 @@ def render(t: dict) -> str:
       <a href="#ako-to-funguje">{t['nav_how']}</a>
       <a href="#cennik">{t['nav_pricing']}</a>
       <a href="#faq">{t['nav_faq']}</a>
-      <a href="{p}privacy.html">{t['nav_privacy']}</a>
+      <a href="privacy.html">{t['nav_privacy']}</a>
     </div>
     <div class="nav-actions">
       {lang_switch(t['code'] if t['code'] != 'cs' else 'cs', p)}
@@ -610,8 +610,8 @@ def render(t: dict) -> str:
       </div>
       <div class="footer-col">
         <h4>{t['footer_legal']}</h4>
-        <a href="{p}privacy.html">{t['footer_privacy']}</a>
-        <a href="{p}terms.html">{t['footer_terms']}</a>
+        <a href="privacy.html">{t['footer_privacy']}</a>
+        <a href="terms.html">{t['footer_terms']}</a>
         <a href="mailto:joyitsolutionsro@gmail.com">{t['footer_contact']}</a>
       </div>
     </div>

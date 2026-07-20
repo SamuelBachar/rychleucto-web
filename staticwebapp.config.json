@@ -9,6 +9,30 @@
       "rewrite": "/terms.html"
     },
     {
+      "route": "/cz/privacy",
+      "rewrite": "/cz/privacy.html"
+    },
+    {
+      "route": "/cz/terms",
+      "rewrite": "/cz/terms.html"
+    },
+    {
+      "route": "/de/privacy",
+      "rewrite": "/de/privacy.html"
+    },
+    {
+      "route": "/de/terms",
+      "rewrite": "/de/terms.html"
+    },
+    {
+      "route": "/en/privacy",
+      "rewrite": "/en/privacy.html"
+    },
+    {
+      "route": "/en/terms",
+      "rewrite": "/en/terms.html"
+    },
+    {
       "route": "/cz",
       "redirect": "/cz/",
       "statusCode": 301
