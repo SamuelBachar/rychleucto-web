@@ -7,10 +7,36 @@
     {
       "route": "/terms",
       "rewrite": "/terms.html"
+    },
+    {
+      "route": "/cz",
+      "redirect": "/cz/",
+      "statusCode": 301
+    },
+    {
+      "route": "/de",
+      "redirect": "/de/",
+      "statusCode": 301
+    },
+    {
+      "route": "/en",
+      "redirect": "/en/",
+      "statusCode": 301
     }
   ],
   "navigationFallback": {
     "rewrite": "/index.html",
-    "exclude": ["*.html", "*.css", "*.js", "*.png", "*.jpg", "*.svg"]
+    "exclude": [
+      "/cz/*",
+      "/de/*",
+      "/en/*",
+      "*.html",
+      "*.css",
+      "*.js",
+      "*.png",
+      "*.jpg",
+      "*.svg",
+      "*.webp"
+    ]
   }
 }

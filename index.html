@@ -4,209 +4,37 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>RýchleÚčto — Účtovníctvo za 60 sekúnd mesačne</title>
-  <meta name="description" content="RýchleÚčto je mobilná aplikácia pre živnostníkov a malé firmy na Slovensku. Skenujte doklady, faktúry a bločky a posielajte ich účtovnej firme jedným kliknutím." />
+  <meta name="description" content="RýchleÚčto je mobilná aplikácia pre živnostníkov a malé firmy. Skenujte doklady a posielajte ich účtovnej firme jedným kliknutím." />
+  <link rel="alternate" hreflang="sk" href="https://www.rychleucto.sk/" />
+  <link rel="alternate" hreflang="cs" href="https://www.rychleucto.sk/cz/" />
+  <link rel="alternate" hreflang="de" href="https://www.rychleucto.sk/de/" />
+  <link rel="alternate" hreflang="en" href="https://www.rychleucto.sk/en/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.rychleucto.sk/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --primary: #1A56DB;
-      --primary-dark: #1344b8;
-      --accent: #e8f0fe;
-      --text: #111827;
-      --text-sec: #6B7280;
-      --border: #E5E7EB;
-      --card: #F9FAFB;
-      --white: #ffffff;
-      --green: #059669;
-      --radius: 16px;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      color: var(--text);
-      background: var(--white);
-      line-height: 1.6;
-    }
-
-    /* NAV */
-    nav {
-      position: sticky; top: 0; z-index: 100;
-      background: rgba(255,255,255,0.92);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-      padding: 0 24px;
-    }
-    .nav-inner {
-      max-width: 1100px; margin: 0 auto;
-      display: flex; align-items: center; justify-content: space-between;
-      height: 64px;
-    }
-    .nav-logo { font-size: 20px; font-weight: 800; color: var(--primary); text-decoration: none; }
-    .nav-links { display: flex; gap: 24px; align-items: center; }
-    .nav-links a { text-decoration: none; color: var(--text-sec); font-size: 14px; font-weight: 500; transition: color .2s; }
-    .nav-links a:hover { color: var(--primary); }
-    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; border-radius: 10px; font-size: 14px; font-weight: 600; text-decoration: none; transition: all .2s; cursor: pointer; border: none; }
-    .btn-primary { background: var(--primary); color: white; }
-    .btn-primary:hover { background: var(--primary-dark); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(26,86,219,.3); }
-    .btn-outline { background: transparent; color: var(--primary); border: 2px solid var(--primary); }
-    .btn-outline:hover { background: var(--accent); }
-    .btn-lg { padding: 14px 28px; font-size: 16px; border-radius: 12px; }
-
-    /* HERO */
-    .hero {
-      background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 40%, #EEF2FF 100%);
-      padding: 80px 24px 100px;
-    }
-    .hero-inner {
-      max-width: 1180px; margin: 0 auto;
-      display: grid; grid-template-columns: 0.85fr 1.15fr;
-      align-items: center; gap: 56px;
-    }
-    .hero-text { display: flex; flex-direction: column; align-items: flex-start; }
-    .hero-badge {
-      display: inline-flex; align-items: center; gap: 6px;
-      background: white; border: 1px solid var(--border);
-      padding: 6px 14px; border-radius: 100px;
-      font-size: 13px; font-weight: 600; color: var(--primary);
-      margin-bottom: 24px;
-    }
-    .hero h1 {
-      font-size: clamp(32px, 4.5vw, 56px);
-      font-weight: 900; line-height: 1.1;
-      color: var(--text); margin: 0 0 20px;
-    }
-    .hero h1 span { color: var(--primary); }
-    .hero p {
-      font-size: 17px; color: var(--text-sec);
-      margin: 0 0 36px; line-height: 1.7;
-    }
-    .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; }
-    .store-buttons { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
-    .btn-app-store { background: #111827; color: white; }
-    .btn-app-store:hover { background: #000; transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,.25); }
-    .hero-image { display: flex; justify-content: center; align-items: center; }
-    .hero-image img {
-      width: 100%; max-width: 680px; height: auto;
-      display: block;
-      border-radius: 24px;
-      border: 1px solid rgba(255,255,255,.6);
-      box-shadow: 0 30px 60px rgba(26,86,219,.2);
-    }
-
-    /* SECTION */
-    section { padding: 80px 24px; }
-    .section-inner { max-width: 1100px; margin: 0 auto; }
-    .section-label { font-size: 13px; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 12px; }
-    .section-title { font-size: clamp(28px, 4vw, 40px); font-weight: 800; line-height: 1.2; margin-bottom: 16px; }
-    .section-sub { font-size: 17px; color: var(--text-sec); max-width: 560px; line-height: 1.7; margin-bottom: 48px; }
-
-    /* FEATURES */
-    .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
-    .feature-card {
-      background: var(--card); border: 1px solid var(--border);
-      border-radius: var(--radius); padding: 28px;
-      transition: transform .2s, box-shadow .2s;
-    }
-    .feature-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,.07); }
-    .feature-icon { font-size: 32px; margin-bottom: 16px; }
-    .feature-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
-    .feature-card p { font-size: 14px; color: var(--text-sec); line-height: 1.6; }
-
-    /* HOW */
-    .how-bg { background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%); }
-    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px; margin-top: 48px; }
-    .step { text-align: center; }
-    .step-num {
-      width: 52px; height: 52px; border-radius: 50%;
-      background: var(--primary); color: white;
-      font-size: 20px; font-weight: 800;
-      display: flex; align-items: center; justify-content: center;
-      margin: 0 auto 16px;
-    }
-    .step h3 { font-size: 17px; font-weight: 700; margin-bottom: 8px; }
-    .step p { font-size: 14px; color: var(--text-sec); line-height: 1.6; }
-
-    /* PRICING */
-    .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 720px; }
-    .pricing-card {
-      border: 2px solid var(--border); border-radius: var(--radius);
-      padding: 32px; position: relative;
-    }
-    .pricing-card.featured { border-color: var(--primary); background: #EFF6FF; }
-    .pricing-badge {
-      position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
-      background: var(--primary); color: white;
-      padding: 4px 16px; border-radius: 100px;
-      font-size: 12px; font-weight: 700; white-space: nowrap;
-    }
-    .pricing-name { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
-    .pricing-price { font-size: 40px; font-weight: 900; color: var(--primary); }
-    .pricing-price span { font-size: 16px; font-weight: 500; color: var(--text-sec); }
-    .pricing-desc { font-size: 14px; color: var(--text-sec); margin: 12px 0 20px; }
-    .pricing-features { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
-    .pricing-features li { font-size: 14px; display: flex; align-items: center; gap: 8px; }
-    .pricing-features li::before { content: '✓'; color: var(--green); font-weight: 700; }
-
-    /* FAQ */
-    .faq-list { display: flex; flex-direction: column; gap: 16px; max-width: 720px; }
-    .faq-item { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
-    .faq-q { padding: 18px 20px; font-size: 15px; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
-    .faq-q:hover { background: var(--card); }
-    .faq-a { padding: 0 20px 18px; font-size: 14px; color: var(--text-sec); line-height: 1.7; }
-
-    /* CTA */
-    .cta-section {
-      background: linear-gradient(135deg, var(--primary) 0%, #1344b8 100%);
-      color: white; text-align: center; padding: 80px 24px;
-    }
-    .cta-section h2 { font-size: clamp(28px, 4vw, 44px); font-weight: 900; margin-bottom: 16px; }
-    .cta-section p { font-size: 18px; opacity: .85; margin-bottom: 36px; }
-    .btn-white { background: white; color: var(--primary); }
-    .btn-white:hover { background: #f0f4ff; }
-
-    /* FOOTER */
-    footer {
-      background: var(--text); color: rgba(255,255,255,.7);
-      padding: 48px 24px 32px;
-    }
-    .footer-inner { max-width: 1100px; margin: 0 auto; }
-    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; margin-bottom: 40px; }
-    .footer-brand p { font-size: 14px; margin-top: 12px; line-height: 1.7; }
-    .footer-col h4 { color: white; font-size: 14px; font-weight: 700; margin-bottom: 16px; }
-    .footer-col a { display: block; color: rgba(255,255,255,.6); text-decoration: none; font-size: 14px; margin-bottom: 8px; transition: color .2s; }
-    .footer-col a:hover { color: white; }
-    .footer-bottom { border-top: 1px solid rgba(255,255,255,.1); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 13px; }
-
-    @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .hero-inner { grid-template-columns: 1fr; text-align: center; gap: 40px; }
-      .hero-text { align-items: center; }
-      .footer-top { grid-template-columns: 1fr; gap: 32px; }
-      .footer-bottom { flex-direction: column; text-align: center; }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <div class="nav-inner">
     <a href="/" class="nav-logo">RýchleÚčto</a>
     <div class="nav-links">
+      <a href="#screenshots">Aplikácia</a>
       <a href="#funkcie">Funkcie</a>
       <a href="#ako-to-funguje">Ako to funguje</a>
       <a href="#cennik">Cenník</a>
       <a href="#faq">FAQ</a>
       <a href="privacy.html">Súkromie</a>
     </div>
-    <a href="#download" class="btn btn-primary">Stiahnuť zadarmo</a>
+    <div class="nav-actions">
+      <div class="lang-switch" aria-label="Language"><a href="/" class="active">SK</a><a href="/cz/">CZ</a><a href="/de/">DE</a><a href="/en/">EN</a></div>
+      <a href="#download" class="btn btn-primary">Stiahnuť zadarmo</a>
+    </div>
   </div>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-text">
@@ -220,12 +48,26 @@
       </div>
     </div>
     <div class="hero-image">
-      <img src="hero.png" alt="RýchleÚčto aplikácia — skenovanie dokladu a automatické rozpoznanie údajov" loading="eager" />
+      <img src="hero.png" alt="RýchleÚčto — náhľad aplikácie" loading="eager" />
     </div>
   </div>
 </section>
 
-<!-- HOW -->
+<section id="screenshots" class="screenshots-bg">
+  <div class="section-inner">
+    <div class="section-label">Aplikácia</div>
+    <h2 class="section-title">Pozrite si, ako to vyzerá</h2>
+    <p class="section-sub">Skutočné obrazovky z aplikácie — od skenovania po mesačný export.</p>
+    <div class="screenshots-scroll">
+          <figure class="shot"><img src="assets/screenshots/sk/01.png" alt="Náhľad aplikácie 1" loading="lazy" width="1080" height="1920" /></figure>
+          <figure class="shot"><img src="assets/screenshots/sk/02.png" alt="Náhľad aplikácie 2" loading="lazy" width="1080" height="1920" /></figure>
+          <figure class="shot"><img src="assets/screenshots/sk/03.png" alt="Náhľad aplikácie 3" loading="lazy" width="1080" height="1920" /></figure>
+          <figure class="shot"><img src="assets/screenshots/sk/04.png" alt="Náhľad aplikácie 4" loading="lazy" width="1080" height="1920" /></figure>
+          <figure class="shot"><img src="assets/screenshots/sk/05.png" alt="Náhľad aplikácie 5" loading="lazy" width="1080" height="1920" /></figure>
+    </div>
+  </div>
+</section>
+
 <section id="ako-to-funguje" class="how-bg">
   <div class="section-inner">
     <div class="section-label">Ako to funguje</div>
@@ -244,54 +86,28 @@
       <div class="step">
         <div class="step-num">3</div>
         <h3>Odošlite účtovnej firme</h3>
-        <p>Koncom mesiaca jedným kliknutím odošlete všetky doklady. Email sa otvorí automaticky s prílohou pripravený na odoslanie.</p>
+        <p>Koncom mesiaca jedným kliknutím odošlete všetky doklady. Email sa otvorí automaticky s prílohou.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FEATURES -->
 <section id="funkcie">
   <div class="section-inner">
     <div class="section-label">Funkcie</div>
     <h2 class="section-title">Všetko čo potrebujete</h2>
-    <p class="section-sub">RýchleÚčto robí všetku nudnú administratívu za vás — aby ste sa mohli sústrediť na biznis.</p>
+    <p class="section-sub">RýchleÚčto robí nudnú administratívu za vás — aby ste sa mohli sústrediť na biznis.</p>
     <div class="features-grid">
-      <div class="feature-card">
-        <div class="feature-icon">📸</div>
-        <h3>Inteligentné skenovanie</h3>
-        <p>Odfotografujte doklad v jednej alebo viacerých fotkách. OCR technológia automaticky rozpozná dodávateľa, sumu a dátum.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🔲</div>
-        <h3>eKasa integrácia</h3>
-        <p>Naskenujte QR kód z bločku a aplikácia automaticky dotiahne všetky údaje z systému Finančnej správy SR.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">📊</div>
-        <h3>Prehľad nákladov a príjmov</h3>
-        <p>Automatické rozlišovanie nákladov a príjmov. Farebný prehľad po mesiacoch, filtrovanie a vyhľadávanie.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">📤</div>
-        <h3>Export pre účtovníka</h3>
-        <p>Jedným kliknutím odošlete mesačný balík — ZIP s PDF prehľadom (tabuľka), CSV report, XML export a originálnymi fotografiami použitými pri skenovaní.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🗂️</div>
-        <h3>Pohoda a Money S3 XML export</h3>
-        <p>Exportujte doklady priamo do formátu pre účtovný softvér Pohoda alebo Money S3.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🔒</div>
-        <h3>100% offline &amp; súkromné</h3>
-        <p>Všetky dáta ostávajú v telefóne. Žiadny cloud, žiadna registrácia, žiadne zdieľanie s tretími stranami.</p>
-      </div>
+      <div class="feature-card"><div class="feature-icon">📸</div><h3>Inteligentné skenovanie</h3><p>Odfotografujte doklad v jednej alebo viacerých fotkách. OCR rozpozná dodávateľa, sumu a dátum.</p></div>
+      <div class="feature-card"><div class="feature-icon">🔲</div><h3>eKasa integrácia</h3><p>Naskenujte QR kód z bločku a aplikácia dotiahne údaje z Finančnej správy SR.</p></div>
+      <div class="feature-card"><div class="feature-icon">📊</div><h3>Prehľad nákladov a príjmov</h3><p>Automatické rozlišovanie nákladov a príjmov. Prehľad po mesiacoch, filtre a vyhľadávanie.</p></div>
+      <div class="feature-card"><div class="feature-icon">📤</div><h3>Export pre účtovníka</h3><p>Mesačný ZIP: PDF tabuľka, CSV, XML, ISDOC, OMEGA a originálne fotografie.</p></div>
+      <div class="feature-card"><div class="feature-icon">🗂️</div><h3>Pohoda, Money S3, OMEGA</h3><p>Exportujte doklady do formátov pre bežné účtovné softvéry.</p></div>
+      <div class="feature-card"><div class="feature-icon">🔒</div><h3>100% offline & súkromné</h3><p>Dáta ostávajú v telefóne. Žiadny cloud, žiadna registrácia, žiadne zdieľanie s tretími stranami.</p></div>
     </div>
   </div>
 </section>
 
-<!-- PRICING -->
 <section id="cennik">
   <div class="section-inner">
     <div class="section-label">Cenník</div>
@@ -306,7 +122,7 @@
           <li>Neobmedzené skenovanie dokladov</li>
           <li>OCR + eKasa integrácia</li>
           <li>Export pre účtovníka</li>
-          <li>Pohoda a Money S3 XML export</li>
+          <li>XML / ISDOC / OMEGA export</li>
         </ul>
         <a href="#download" class="btn btn-outline" style="width:100%;justify-content:center;">Vyskúšať zadarmo</a>
       </div>
@@ -328,7 +144,6 @@
   </div>
 </section>
 
-<!-- FAQ -->
 <section id="faq" style="background: var(--card);">
   <div class="section-inner">
     <div class="section-label">FAQ</div>
@@ -336,53 +151,48 @@
     <div class="faq-list">
       <div class="faq-item">
         <div class="faq-q">Pre koho je RýchleÚčto určené? <span>+</span></div>
-        <div class="faq-a">Pre živnostníkov, malé s.r.o. a každého, kto chce ušetriť čas s mesačnou administratívou pre účtovníka. Funguje pre firmy aj živnostníkov.</div>
+        <div class="faq-a">Pre živnostníkov, malé s.r.o. a každého, kto chce ušetriť čas s mesačnou administratívou pre účtovníka.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">Sú moje dáta v bezpečí? <span>+</span></div>
-        <div class="faq-a">Áno. Všetky dáta ostávajú výlučne v telefóne. Aplikácia neposiela žiadne osobné údaje na server, nevyžaduje registráciu ani cloud účet.</div>
+        <div class="faq-a">Áno. Všetky dáta ostávajú výlučne v telefóne. Aplikácia neposiela osobné údaje na server a nevyžaduje registráciu.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">Funguje aplikácia bez internetu? <span>+</span></div>
-        <div class="faq-a">Áno, takmer všetko funguje offline. Internet je potrebný len pre eKasa overenie QR kódov z bločkov (komunikácia s Finančnou správou SR).</div>
+        <div class="faq-a">Áno, takmer všetko funguje offline. Internet je potrebný len pre eKasa overenie QR kódov.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">Ako prebieha platba? <span>+</span></div>
-        <div class="faq-a">Platba prebieha cez Google Play alebo App Store — tou istou platobnou kartou, ktorú máte nastavenú vo vašom účte. Predplatné môžete kedykoľvek zrušiť.</div>
+        <div class="faq-a">Cez Google Play alebo App Store. Predplatné môžete kedykoľvek zrušiť.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">Podporuje aplikácia česky? <span>+</span></div>
-        <div class="faq-a">Aplikácia je primárne v slovenčine, avšak OCR rozpoznávanie funguje aj na českých faktúrach a dokladoch.</div>
+        <div class="faq-q">V akých jazykoch je aplikácia? <span>+</span></div>
+        <div class="faq-a">Slovenčina, čeština, nemčina a angličtina.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
 <section class="cta-section" id="download">
   <h2>Začnite používať RýchleÚčto dnes</h2>
   <p>30 dní zadarmo. Žiadna registrácia. Žiadna kreditná karta.</p>
   <div class="store-buttons">
-    <a href="https://play.google.com/store/apps/details?id=sk.rychleucto.rychleucto" class="btn btn-white btn-lg">
-      📱 Stiahnuť z Google Play (Android)
-    </a>
-    <a href="https://apps.apple.com/sk/app/rychleucto/id0000000000" class="btn btn-white btn-lg" style="color:#111827;">
-      🍎 Stiahnuť z App Store (iPhone)
-    </a>
+    <a href="https://play.google.com/store/apps/details?id=sk.rychleucto.rychleucto" class="btn btn-white btn-lg">📱 Stiahnuť z Google Play (Android)</a>
+    <a href="https://apps.apple.com/sk/app/rychleucto/id0000000000" class="btn btn-white btn-lg" style="color:#111827;">🍎 Stiahnuť z App Store (iPhone)</a>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-brand">
         <div style="font-size:20px;font-weight:800;color:white;">RýchleÚčto</div>
-        <p>Mobilná aplikácia pre živnostníkov a malé firmy na Slovensku. Účtovníctvo za 60 sekúnd mesačne.</p>
+        <p>Mobilná aplikácia pre živnostníkov a malé firmy. Účtovníctvo za 60 sekúnd mesačne.</p>
         <p style="margin-top:12px;">Vyvinuté s ❤️ od <strong style="color:white;">Joy IT Solution s.r.o.</strong></p>
       </div>
       <div class="footer-col">
         <h4>Aplikácia</h4>
+        <a href="#screenshots">Aplikácia</a>
         <a href="#funkcie">Funkcie</a>
         <a href="#ako-to-funguje">Ako to funguje</a>
         <a href="#cennik">Cenník</a>
