@@ -126,7 +126,7 @@ PAGES = {
 
   <h2>4. Predplatné a platby</h2>
   <ul>
-    <li>Aplikácia môže zahŕňať bezplatnú skúšobnú dobu (napr. 30 dní) a následné mesačné predplatné.</li>
+    <li>Aplikácia môže zahŕňať bezplatnú skúšobnú dobu (napr. 30 dní) a následné predplatné: ročné (napr. 9,99€ / 50 dokladov za rok) alebo mesačné neobmedzené (napr. 4,99€).</li>
     <li>Aktuálna cena a dĺžka skúšobnej doby sú uvedené v App Store / Google Play v čase nákupu.</li>
     <li>Platba sa účtuje cez účet Apple ID alebo Google účet. Joy IT Solution s.r.o. neprijíma údaje o platobnej karte.</li>
     <li>Predplatné sa automaticky obnovuje, pokiaľ ho nezrušíte najmenej 24 hodín pred koncom aktuálneho obdobia.</li>
@@ -244,7 +244,7 @@ PAGES = {
 
   <h2>4. Předplatné a platby</h2>
   <ul>
-    <li>Aplikace může zahrnovat bezplatnou zkušební dobu (např. 30 dní) a následné měsíční předplatné.</li>
+    <li>Aplikace může zahrnovat bezplatnou zkušební dobu (např. 30 dní) a následné předplatné: roční (např. 9,99€ / 50 dokladů za rok) nebo měsíční neomezené (např. 4,99€).</li>
     <li>Aktuální cena a délka zkušební doby jsou uvedeny v App Store / Google Play v okamžiku nákupu.</li>
     <li>Platba probíhá přes účet Apple ID nebo Google. Joy IT Solution s.r.o. nepřijímá údaje o platební kartě.</li>
     <li>Předplatné se automaticky obnovuje, pokud jej nezrušíte nejpozději 24 hodin před koncem aktuálního období.</li>
@@ -358,7 +358,7 @@ PAGES = {
 
   <h2>4. Abonnement und Zahlung</h2>
   <ul>
-    <li>Es kann eine kostenlose Testphase (z. B. 30 Tage) und danach ein Monatsabonnement geben.</li>
+    <li>Es kann eine kostenlose Testphase (z. B. 30 Tage) und danach ein Jahresabo (z. B. 9,99€ / 50 Belege pro Jahr) oder ein unbegrenztes Monatsabo (z. B. 4,99€) geben.</li>
     <li>Preis und Testzeitraum sind im App Store / Google Play zum Kaufzeitpunkt ausgewiesen.</li>
     <li>Die Zahlung erfolgt über Apple-ID oder Google-Konto. Wir speichern keine Kartendaten.</li>
     <li>Das Abo verlängert sich automatisch, sofern es nicht mindestens 24 Stunden vor Periodenende gekündigt wird.</li>
@@ -471,7 +471,7 @@ PAGES = {
 
   <h2>4. Subscriptions and payments</h2>
   <ul>
-    <li>The app may include a free trial (e.g. 30 days) followed by a monthly subscription.</li>
+    <li>The app may include a free trial (e.g. 30 days) followed by a yearly plan (e.g. €9.99 / 50 documents per year) or an unlimited monthly subscription (e.g. €4.99).</li>
     <li>Current price and trial length are shown in the App Store / Google Play at purchase time.</li>
     <li>Payment is charged to your Apple ID or Google account. We do not receive card details.</li>
     <li>Subscriptions renew automatically unless cancelled at least 24 hours before the end of the current period.</li>
