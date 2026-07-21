@@ -448,7 +448,10 @@ def screenshots_html(t: dict) -> str:
         src = f'{p}assets/screenshots/{t["shot_dir"]}/{n:02d}.png'
         alt = t["shot_alt"].format(n=n)
         shots.append(
-            f'<figure class="shot"><img src="{src}" alt="{alt}" loading="lazy" width="1080" height="1920" /></figure>'
+            f'<figure class="shot">'
+            f'<a href="{src}" class="shot-link" data-lightbox aria-label="{alt}">'
+            f'<img src="{src}" alt="{alt}" loading="lazy" width="1080" height="1920" />'
+            f'</a></figure>'
         )
     return "\n          ".join(shots)
 
@@ -670,6 +673,7 @@ def render(t: dict) -> str:
   </div>
 </footer>
 
+<script src="{p}site.js" defer></script>
 </body>
 </html>
 """
