@@ -162,24 +162,24 @@ PAGES = {
         "dir": "cz",
         "home": "/cz/",
         "html_lang": "cs",
-        "app": "RychléÚčto",
+        "app": "ÚčtoSkenExport",
         "back": "← Zpět na hlavní stránku",
         "home_label": "Hlavní stránka",
         "privacy_label": "Zásady ochrany soukromí",
         "terms_label": "Obchodní podmínky",
         "updated": "Poslední aktualizace: 20. července 2026",
-        "privacy_title": "Zásady ochrany soukromí — RychléÚčto",
-        "terms_title": "Obchodní podmínky — RychléÚčto",
-        "privacy_highlight": "RychléÚčto ukládá všechna vaše data výhradně lokálně v telefonu. Neodesílají se žádné osobní údaje na naše servery ani třetím stranám.",
+        "privacy_title": "Zásady ochrany soukromí — ÚčtoSkenExport",
+        "terms_title": "Obchodní podmínky — ÚčtoSkenExport",
+        "privacy_highlight": "ÚčtoSkenExport ukládá všechna vaše data výhradně lokálně v telefonu. Neodesílají se žádné osobní údaje na naše servery ani třetím stranám.",
         "privacy_body": """
   <h2>1. Provozovatel</h2>
-  <p>Provozovatelem aplikace RychléÚčto je:</p>
+  <p>Provozovatelem aplikace ÚčtoSkenExport je:</p>
   <p><strong>Joy IT Solution s.r.o.</strong><br/>
   Slovenská republika<br/>
   Email: <a href="mailto:joyitsolutionsro@gmail.com">joyitsolutionsro@gmail.com</a></p>
 
   <h2>2. Jaká data aplikace používá</h2>
-  <p>Aplikace RychléÚčto pracuje s následujícími typy dat:</p>
+  <p>Aplikace ÚčtoSkenExport pracuje s následujícími typy dat:</p>
   <ul>
     <li><strong>Fotografie dokladů</strong> — faktury a účtenky, které uživatel vyfotí nebo nahraje</li>
     <li><strong>Rozpoznaný text</strong> — výsledky OCR zpracování fotografií (název dodavatele, částka, datum, IČO)</li>
@@ -228,14 +228,14 @@ PAGES = {
   <h2>9. Kontakt</h2>
   <p>📧 <a href="mailto:joyitsolutionsro@gmail.com">joyitsolutionsro@gmail.com</a></p>
 """,
-        "terms_highlight": "Používáním aplikace RychléÚčto souhlasíte s těmito obchodními podmínkami. Předplatné se spravuje přes App Store nebo Google Play.",
+        "terms_highlight": "Používáním aplikace ÚčtoSkenExport souhlasíte s těmito obchodními podmínkami. Předplatné se spravuje přes App Store nebo Google Play.",
         "terms_body": """
   <h2>1. Provozovatel</h2>
-  <p>Službu RychléÚčto poskytuje <strong>Joy IT Solution s.r.o.</strong>, Slovenská republika.
+  <p>Službu ÚčtoSkenExport poskytuje <strong>Joy IT Solution s.r.o.</strong>, Slovenská republika.
   Kontakt: <a href="mailto:joyitsolutionsro@gmail.com">joyitsolutionsro@gmail.com</a>.</p>
 
   <h2>2. Popis služby</h2>
-  <p>RychléÚčto je mobilní aplikace pro skenování dokladů, lokální OCR zpracování, organizaci dokladů
+  <p>ÚčtoSkenExport je mobilní aplikace pro skenování dokladů, lokální OCR zpracování, organizaci dokladů
   a export / odeslání balíčku účetní firmě. Data se zpracovávají lokálně v zařízení uživatele.</p>
 
   <h2>3. Licence k užívání</h2>
@@ -278,18 +278,18 @@ PAGES = {
         "dir": "de",
         "home": "/de/",
         "html_lang": "de",
-        "app": "RychleÚčto",
+        "app": "SchnellBelegio",
         "back": "← Zurück zur Startseite",
         "home_label": "Startseite",
         "privacy_label": "Datenschutzerklärung",
         "terms_label": "Nutzungsbedingungen",
         "updated": "Zuletzt aktualisiert: 20. Juli 2026",
-        "privacy_title": "Datenschutzerklärung — RychleÚčto",
-        "terms_title": "Nutzungsbedingungen — RychleÚčto",
-        "privacy_highlight": "RychleÚčto speichert alle Ihre Daten ausschließlich lokal auf dem Telefon. Es werden keine personenbezogenen Daten an unsere Server oder an Dritte gesendet.",
+        "privacy_title": "Datenschutzerklärung — SchnellBelegio",
+        "terms_title": "Nutzungsbedingungen — SchnellBelegio",
+        "privacy_highlight": "SchnellBelegio speichert alle Ihre Daten ausschließlich lokal auf dem Telefon. Es werden keine personenbezogenen Daten an unsere Server oder an Dritte gesendet.",
         "privacy_body": """
   <h2>1. Verantwortlicher</h2>
-  <p>Verantwortlicher für die App RychleÚčto ist:</p>
+  <p>Verantwortlicher für die App SchnellBelegio ist:</p>
   <p><strong>Joy IT Solution s.r.o.</strong><br/>
   Slowakische Republik<br/>
   E-Mail: <a href="mailto:joyitsolutionsro@gmail.com">joyitsolutionsro@gmail.com</a></p>
@@ -342,14 +342,14 @@ PAGES = {
   <h2>9. Kontakt</h2>
   <p>📧 <a href="mailto:joyitsolutionsro@gmail.com">joyitsolutionsro@gmail.com</a></p>
 """,
-        "terms_highlight": "Mit der Nutzung von RychleÚčto akzeptieren Sie diese Nutzungsbedingungen. Abonnements werden über App Store oder Google Play verwaltet.",
+        "terms_highlight": "Mit der Nutzung von SchnellBelegio akzeptieren Sie diese Nutzungsbedingungen. Abonnements werden über App Store oder Google Play verwaltet.",
         "terms_body": """
   <h2>1. Anbieter</h2>
-  <p>Die App RychleÚčto wird von <strong>Joy IT Solution s.r.o.</strong>, Slowakische Republik, bereitgestellt.
+  <p>Die App SchnellBelegio wird von <strong>Joy IT Solution s.r.o.</strong>, Slowakische Republik, bereitgestellt.
   Kontakt: <a href="mailto:joyitsolutionsro@gmail.com">joyitsolutionsro@gmail.com</a>.</p>
 
   <h2>2. Leistungsbeschreibung</h2>
-  <p>RychleÚčto ist eine mobile App zum Scannen von Belegen, lokaler OCR-Verarbeitung, Organisation
+  <p>SchnellBelegio ist eine mobile App zum Scannen von Belegen, lokaler OCR-Verarbeitung, Organisation
   und Export/Versand an die Buchhaltung. Die Verarbeitung erfolgt lokal auf dem Gerät.</p>
 
   <h2>3. Nutzungsrecht</h2>
@@ -391,18 +391,18 @@ PAGES = {
         "dir": "en",
         "home": "/en/",
         "html_lang": "en",
-        "app": "RychleÚčto",
+        "app": "Scan2Accountant",
         "back": "← Back to home",
         "home_label": "Home",
         "privacy_label": "Privacy policy",
         "terms_label": "Terms of service",
         "updated": "Last updated: 20 July 2026",
-        "privacy_title": "Privacy Policy — RychleÚčto",
-        "terms_title": "Terms of Service — RychleÚčto",
-        "privacy_highlight": "RychleÚčto stores all your data locally on your phone. No personal data is sent to our servers or to third parties.",
+        "privacy_title": "Privacy Policy — Scan2Accountant",
+        "terms_title": "Terms of Service — Scan2Accountant",
+        "privacy_highlight": "Scan2Accountant stores all your data locally on your phone. No personal data is sent to our servers or to third parties.",
         "privacy_body": """
   <h2>1. Controller</h2>
-  <p>The controller of the RychleÚčto app is:</p>
+  <p>The controller of the Scan2Accountant app is:</p>
   <p><strong>Joy IT Solution s.r.o.</strong><br/>
   Slovak Republic<br/>
   Email: <a href="mailto:joyitsolutionsro@gmail.com">joyitsolutionsro@gmail.com</a></p>
@@ -447,7 +447,7 @@ PAGES = {
   </ul>
 
   <h2>7. Children</h2>
-  <p>RychleÚčto is intended for adults (business users) aged 18+. We do not knowingly collect information from children.</p>
+  <p>Scan2Accountant is intended for adults (business users) aged 18+. We do not knowingly collect information from children.</p>
 
   <h2>8. Changes</h2>
   <p>Material changes to this policy will be communicated via an app update or on this page.</p>
@@ -455,14 +455,14 @@ PAGES = {
   <h2>9. Contact</h2>
   <p>📧 <a href="mailto:joyitsolutionsro@gmail.com">joyitsolutionsro@gmail.com</a></p>
 """,
-        "terms_highlight": "By using RychleÚčto you agree to these Terms of Service. Subscriptions are managed via the App Store or Google Play.",
+        "terms_highlight": "By using Scan2Accountant you agree to these Terms of Service. Subscriptions are managed via the App Store or Google Play.",
         "terms_body": """
   <h2>1. Provider</h2>
-  <p>RychleÚčto is provided by <strong>Joy IT Solution s.r.o.</strong>, Slovak Republic.
+  <p>Scan2Accountant is provided by <strong>Joy IT Solution s.r.o.</strong>, Slovak Republic.
   Contact: <a href="mailto:joyitsolutionsro@gmail.com">joyitsolutionsro@gmail.com</a>.</p>
 
   <h2>2. Service description</h2>
-  <p>RychleÚčto is a mobile app for scanning documents, on-device OCR, organizing receipts,
+  <p>Scan2Accountant is a mobile app for scanning documents, on-device OCR, organizing receipts,
   and exporting / emailing a monthly package to your accountant. Processing happens locally on your device.</p>
 
   <h2>3. License</h2>
