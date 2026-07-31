@@ -424,7 +424,7 @@ LANGS = {
 }
 
 PLAY = "https://play.google.com/store/apps/details?id=sk.rychleucto.rychleucto"
-IOS = "https://apps.apple.com/sk/app/rychleucto/id0000000000"
+IOS = "https://apps.apple.com/sk/app/scan2accountant/id6788722506"
 
 
 def lang_switch(active: str, prefix: str) -> str:
