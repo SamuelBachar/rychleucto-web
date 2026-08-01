@@ -2,6 +2,8 @@
 """Generate SK / CZ / DE / EN landing pages for rychleucto.sk"""
 from pathlib import Path
 
+from ga import head_snippet as ga_head
+
 ROOT = Path(__file__).resolve().parent
 
 LANGS = {
@@ -486,6 +488,7 @@ def render(t: dict) -> str:
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="{p}styles.css" />
+{ga_head()}
 </head>
 <body>
 

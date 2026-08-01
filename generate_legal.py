@@ -4,6 +4,8 @@ from __future__ import annotations
 
 from pathlib import Path
 
+from ga import head_snippet as ga_head
+
 ROOT = Path(__file__).resolve().parent
 
 CSS = """
@@ -45,7 +47,7 @@ PAGES = {
         "home_label": "Hlavná stránka",
         "privacy_label": "Zásady ochrany súkromia",
         "terms_label": "Obchodné podmienky",
-        "updated": "Posledná aktualizácia: 20. júla 2026",
+        "updated": "Posledná aktualizácia: 1. augusta 2026",
         "privacy_title": "Zásady ochrany súkromia — RýchleÚčto",
         "terms_title": "Obchodné podmienky — RýchleÚčto",
         "privacy_highlight": "RýchleÚčto ukladá všetky vaše dáta výlučne lokálne v telefóne. Neposielajú sa žiadne osobné údaje na naše servery ani tretím stranám.",
@@ -105,7 +107,12 @@ PAGES = {
   <h2>8. Zmeny zásad</h2>
   <p>O akýchkoľvek podstatných zmenách týchto zásad budeme informovať prostredníctvom aktualizácie aplikácie alebo na tejto stránke.</p>
 
-  <h2>9. Kontakt</h2>
+  <h2>9. Webová stránka a analytika</h2>
+  <p>Na webe <strong>www.rychleucto.sk</strong> používame <strong>Google Analytics 4</strong> na meranie návštevnosti
+  (napr. počet návštev, zobrazené stránky, krajina, typ zariadenia, odkazy von). Tieto údaje spracúva Google
+  podľa svojich podmienok. Analytika sa týka <strong>iba webu</strong> — nie mobilnej aplikácie ani dokladov v nej.</p>
+
+  <h2>10. Kontakt</h2>
   <p>Ak máte otázky týkajúce sa ochrany súkromia, kontaktujte nás:</p>
   <p>📧 <a href="mailto:joyitsolutionsro@gmail.com">joyitsolutionsro@gmail.com</a></p>
 """,
@@ -167,7 +174,7 @@ PAGES = {
         "home_label": "Hlavní stránka",
         "privacy_label": "Zásady ochrany soukromí",
         "terms_label": "Obchodní podmínky",
-        "updated": "Poslední aktualizace: 20. července 2026",
+        "updated": "Poslední aktualizace: 1. srpna 2026",
         "privacy_title": "Zásady ochrany soukromí — ÚčtoSkenExport",
         "terms_title": "Obchodní podmínky — ÚčtoSkenExport",
         "privacy_highlight": "ÚčtoSkenExport ukládá všechna vaše data výhradně lokálně v telefonu. Neodesílají se žádné osobní údaje na naše servery ani třetím stranám.",
@@ -225,7 +232,12 @@ PAGES = {
   <h2>8. Změny zásad</h2>
   <p>O podstatných změnách budeme informovat aktualizací aplikace nebo na této stránce.</p>
 
-  <h2>9. Kontakt</h2>
+  <h2>9. Webová stránka a analytika</h2>
+  <p>Na webu <strong>www.rychleucto.sk</strong> používáme <strong>Google Analytics 4</strong> k měření návštěvnosti
+  (např. počet návštěv, zobrazené stránky, země, typ zařízení, odchozí odkazy). Tato data zpracovává Google
+  podle svých podmínek. Analytika se týká <strong>pouze webu</strong> — nikoli mobilní aplikace ani dokladů v ní.</p>
+
+  <h2>10. Kontakt</h2>
   <p>📧 <a href="mailto:joyitsolutionsro@gmail.com">joyitsolutionsro@gmail.com</a></p>
 """,
         "terms_highlight": "Používáním aplikace ÚčtoSkenExport souhlasíte s těmito obchodními podmínkami. Předplatné se spravuje přes App Store nebo Google Play.",
@@ -283,7 +295,7 @@ PAGES = {
         "home_label": "Startseite",
         "privacy_label": "Datenschutzerklärung",
         "terms_label": "Nutzungsbedingungen",
-        "updated": "Zuletzt aktualisiert: 20. Juli 2026",
+        "updated": "Zuletzt aktualisiert: 1. August 2026",
         "privacy_title": "Datenschutzerklärung — SchnellBelegio",
         "terms_title": "Nutzungsbedingungen — SchnellBelegio",
         "privacy_highlight": "SchnellBelegio speichert alle Ihre Daten ausschließlich lokal auf dem Telefon. Es werden keine personenbezogenen Daten an unsere Server oder an Dritte gesendet.",
@@ -339,7 +351,12 @@ PAGES = {
   <h2>8. Änderungen</h2>
   <p>Wesentliche Änderungen dieser Erklärung kommunizieren wir per App-Update oder auf dieser Seite.</p>
 
-  <h2>9. Kontakt</h2>
+  <h2>9. Website und Analytik</h2>
+  <p>Auf der Website <strong>www.rychleucto.sk</strong> nutzen wir <strong>Google Analytics 4</strong> zur Messung
+  der Besuche (z. B. Seitenaufrufe, Land, Gerätetyp, ausgehende Klicks). Die Daten werden von Google gemäß
+  deren Bedingungen verarbeitet. Die Analytik betrifft <strong>nur die Website</strong> — nicht die App und nicht Ihre Belege.</p>
+
+  <h2>10. Kontakt</h2>
   <p>📧 <a href="mailto:joyitsolutionsro@gmail.com">joyitsolutionsro@gmail.com</a></p>
 """,
         "terms_highlight": "Mit der Nutzung von SchnellBelegio akzeptieren Sie diese Nutzungsbedingungen. Abonnements werden über App Store oder Google Play verwaltet.",
@@ -396,7 +413,7 @@ PAGES = {
         "home_label": "Home",
         "privacy_label": "Privacy policy",
         "terms_label": "Terms of service",
-        "updated": "Last updated: 20 July 2026",
+        "updated": "Last updated: 1 August 2026",
         "privacy_title": "Privacy Policy — Scan2Accountant",
         "terms_title": "Terms of Service — Scan2Accountant",
         "privacy_highlight": "Scan2Accountant stores all your data locally on your phone. No personal data is sent to our servers or to third parties.",
@@ -452,7 +469,12 @@ PAGES = {
   <h2>8. Changes</h2>
   <p>Material changes to this policy will be communicated via an app update or on this page.</p>
 
-  <h2>9. Contact</h2>
+  <h2>9. Website analytics</h2>
+  <p>On <strong>www.rychleucto.sk</strong> we use <strong>Google Analytics 4</strong> to measure traffic
+  (e.g. visits, page views, country, device type, outbound clicks). Google processes these data under its terms.
+  Analytics applies to the <strong>website only</strong> — not the mobile app or your documents.</p>
+
+  <h2>10. Contact</h2>
   <p>📧 <a href="mailto:joyitsolutionsro@gmail.com">joyitsolutionsro@gmail.com</a></p>
 """,
         "terms_highlight": "By using Scan2Accountant you agree to these Terms of Service. Subscriptions are managed via the App Store or Google Play.",
@@ -551,6 +573,7 @@ def render_page(lang: str, kind: str) -> str:
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>{CSS}
   </style>
+{ga_head()}
 </head>
 <body>
 
