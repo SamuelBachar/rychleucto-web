@@ -110,6 +110,16 @@ LANGS = {
         "footer_copy": "© 2026 RýchleÚčto — Joy IT Solution s.r.o. Všetky práva vyhradené.",
         "footer_country": "🇸🇰 Slovenská republika",
         "developed": "Vyvinuté s ❤️ od",
+        "compat_label": "Kompatibilita",
+        "compat_title": "Export pre účtovné softvéry",
+        "compat_sub": "Mesačný balík obsahuje importné súbory pripravené pre bežné účtovné systémy.",
+        "compat_items": [
+            "Export do MRP XML 2.0",
+            "Export do POHODA XML",
+            "Export do Money S3 XML",
+            "Export do OMEGA (TXT)",
+        ],
+        "trademark_disclaimer": "Názvy MRP, POHODA, Money S3 a OMEGA sú ochrannými známkami ich príslušných vlastníkov. Táto aplikácia nie je s uvedenými spoločnosťami pridružená ani nimi schválená.",
     },
     "cs": {
         "code": "cs",
@@ -214,6 +224,16 @@ LANGS = {
         "footer_copy": "© 2026 ÚčtoSkenExport — Joy IT Solution s.r.o. Všechna práva vyhrazena.",
         "footer_country": "🇨🇿 Česká republika",
         "developed": "Vyvinuto s ❤️ od",
+        "compat_label": "Kompatibilita",
+        "compat_title": "Export pro účetní softwary",
+        "compat_sub": "Měsíční balíček obsahuje importní soubory připravené pro běžné účetní systémy.",
+        "compat_items": [
+            "Export do MRP XML 2.0",
+            "Export do POHODA XML",
+            "Export do Money S3 XML",
+            "Export do OMEGA (TXT)",
+        ],
+        "trademark_disclaimer": "Názvy MRP, POHODA, Money S3 a OMEGA jsou ochrannými známkami jejich příslušných vlastníků. Tato aplikace není s uvedenými společnostmi přidružená ani jimi schválená.",
     },
     "de": {
         "code": "de",
@@ -318,6 +338,16 @@ LANGS = {
         "footer_copy": "© 2026 SchnellBelegio — Joy IT Solution s.r.o. Alle Rechte vorbehalten.",
         "footer_country": "🇩🇪 Deutschland / 🇦🇹 Österreich",
         "developed": "Entwickelt mit ❤️ von",
+        "compat_label": "Kompatibilität",
+        "compat_title": "Export für Buchhaltungssoftware",
+        "compat_sub": "Das Monatspaket enthält Importdateien für gängige Buchhaltungssysteme.",
+        "compat_items": [
+            "Export nach MRP XML 2.0",
+            "Export nach POHODA XML",
+            "Export nach Money S3 XML",
+            "Export nach OMEGA (TXT)",
+        ],
+        "trademark_disclaimer": "Die Namen MRP, POHODA, Money S3 und OMEGA sind Marken ihrer jeweiligen Inhaber. Diese App ist mit den genannten Unternehmen weder verbunden noch von ihnen genehmigt.",
     },
     "en": {
         "code": "en",
@@ -422,6 +452,16 @@ LANGS = {
         "footer_copy": "© 2026 Scan2Accountant — Joy IT Solution s.r.o. All rights reserved.",
         "footer_country": "🌍 Europe",
         "developed": "Built with ❤️ by",
+        "compat_label": "Compatibility",
+        "compat_title": "Export for accounting software",
+        "compat_sub": "The monthly bundle includes import files prepared for common accounting systems.",
+        "compat_items": [
+            "Export to MRP XML 2.0",
+            "Export to POHODA XML",
+            "Export to Money S3 XML",
+            "Export to OMEGA (TXT)",
+        ],
+        "trademark_disclaimer": "MRP, POHODA, Money S3 and OMEGA are trademarks of their respective owners. This app is not affiliated with or endorsed by those companies.",
     },
 }
 
@@ -470,6 +510,13 @@ def faq_html(t: dict) -> str:
     return "\n".join(blocks)
 
 
+def compat_html(t: dict) -> str:
+    items = "\n".join(f"        <li>{item}</li>" for item in t["compat_items"])
+    return f"""      <ul class="compat-list">
+{items}
+      </ul>"""
+
+
 def render(t: dict) -> str:
     p = t["prefix"]
     return f"""<!DOCTYPE html>
@@ -499,6 +546,7 @@ def render(t: dict) -> str:
       <a href="#screenshots">{t['nav_screens']}</a>
       <a href="#funkcie">{t['nav_features']}</a>
       <a href="#ako-to-funguje">{t['nav_how']}</a>
+      <a href="#kompatibilita">{t['compat_label']}</a>
       <a href="#cennik">{t['nav_pricing']}</a>
       <a href="#faq">{t['nav_faq']}</a>
       <a href="privacy.html">{t['nav_privacy']}</a>
@@ -576,6 +624,16 @@ def render(t: dict) -> str:
       <div class="feature-card"><div class="feature-icon">🗂️</div><h3>{t['f5_t']}</h3><p>{t['f5_p']}</p></div>
       <div class="feature-card"><div class="feature-icon">🔒</div><h3>{t['f6_t']}</h3><p>{t['f6_p']}</p></div>
     </div>
+  </div>
+</section>
+
+<section id="kompatibilita" class="compat-bg">
+  <div class="section-inner">
+    <div class="section-label">{t['compat_label']}</div>
+    <h2 class="section-title">{t['compat_title']}</h2>
+    <p class="section-sub">{t['compat_sub']}</p>
+{compat_html(t)}
+    <p class="trademark-disclaimer">{t['trademark_disclaimer']}</p>
   </div>
 </section>
 
@@ -659,6 +717,7 @@ def render(t: dict) -> str:
         <a href="#screenshots">{t['nav_screens']}</a>
         <a href="#funkcie">{t['nav_features']}</a>
         <a href="#ako-to-funguje">{t['nav_how']}</a>
+        <a href="#kompatibilita">{t['compat_label']}</a>
         <a href="#cennik">{t['nav_pricing']}</a>
         <a href="#faq">{t['nav_faq']}</a>
       </div>
@@ -673,6 +732,7 @@ def render(t: dict) -> str:
       <div>{t['footer_copy']}</div>
       <div>{t['footer_country']}</div>
     </div>
+    <p class="footer-disclaimer">{t['trademark_disclaimer']}</p>
   </div>
 </footer>
 
