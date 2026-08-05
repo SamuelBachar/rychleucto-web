@@ -558,12 +558,21 @@ def render_page(lang: str, kind: str) -> str:
     other_label = t["terms_label"] if kind == "privacy" else t["privacy_label"]
     other_href = f"{other_kind}.html"
 
+    home = t["home"]
+    if home == "/":
+        canonical = f"https://www.rychleucto.sk/{kind}.html"
+    else:
+        canonical = f"https://www.rychleucto.sk{home}{kind}.html"
+
     return f"""<!DOCTYPE html>
 <html lang="{t['html_lang']}">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{title}</title>
+  <meta name="description" content="{highlight}" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="{canonical}" />
   <link rel="alternate" hreflang="sk" href="https://www.rychleucto.sk/{kind}.html" />
   <link rel="alternate" hreflang="cs" href="https://www.rychleucto.sk/cz/{kind}.html" />
   <link rel="alternate" hreflang="de" href="https://www.rychleucto.sk/de/{kind}.html" />

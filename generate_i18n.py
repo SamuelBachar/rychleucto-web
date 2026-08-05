@@ -517,6 +517,94 @@ def compat_html(t: dict) -> str:
       </ul>"""
 
 
+def _json_escape(value: str) -> str:
+    return (
+        value.replace("\\", "\\\\")
+        .replace('"', '\\"')
+        .replace("\n", "\\n")
+        .replace("\r", "")
+    )
+
+
+def seo_head(t: dict) -> str:
+    """Canonical, Open Graph, Twitter + JSON-LD for search engines."""
+    canonical = f"https://www.rychleucto.sk{t['path']}"
+    og_locale = {
+        "sk": "sk_SK",
+        "cs": "cs_CZ",
+        "de": "de_DE",
+        "en": "en_US",
+    }.get(t["code"], "sk_SK")
+    image = "https://www.rychleucto.sk/hero.png"
+    play = "https://play.google.com/store/apps/details?id=sk.rychleucto.rychleucto"
+    ios = "https://apps.apple.com/sk/app/scan2accountant/id6788722506"
+
+    faq_entities = []
+    for q, a in t["faq"]:
+        faq_entities.append(
+            "{\n"
+            '        "@type": "Question",\n'
+            f'        "name": "{_json_escape(q)}",\n'
+            '        "acceptedAnswer": {\n'
+            '          "@type": "Answer",\n'
+            f'          "text": "{_json_escape(a)}"\n'
+            "        }\n"
+            "      }"
+        )
+    faq_json = ",\n      ".join(faq_entities)
+
+    return f"""  <link rel="canonical" href="{canonical}" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="theme-color" content="#1A56DB" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="{t['app']}" />
+  <meta property="og:locale" content="{og_locale}" />
+  <meta property="og:url" content="{canonical}" />
+  <meta property="og:title" content="{t['title']}" />
+  <meta property="og:description" content="{t['description']}" />
+  <meta property="og:image" content="{image}" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{t['title']}" />
+  <meta name="twitter:description" content="{t['description']}" />
+  <meta name="twitter:image" content="{image}" />
+  <script type="application/ld+json">
+  {{
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "{_json_escape(t['app'])}",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Android, iOS",
+    "description": "{_json_escape(t['description'])}",
+    "url": "{canonical}",
+    "image": "{image}",
+    "offers": {{
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR"
+    }},
+    "downloadUrl": [
+      "{play}",
+      "{ios}"
+    ],
+    "publisher": {{
+      "@type": "Organization",
+      "name": "Joy IT Solution s.r.o.",
+      "url": "https://www.rychleucto.sk/"
+    }}
+  }}
+  </script>
+  <script type="application/ld+json">
+  {{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {faq_json}
+    ]
+  }}
+  </script>
+"""
+
+
 def render(t: dict) -> str:
     p = t["prefix"]
     return f"""<!DOCTYPE html>
@@ -531,7 +619,7 @@ def render(t: dict) -> str:
   <link rel="alternate" hreflang="de" href="https://www.rychleucto.sk/de/" />
   <link rel="alternate" hreflang="en" href="https://www.rychleucto.sk/en/" />
   <link rel="alternate" hreflang="x-default" href="https://www.rychleucto.sk/" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
+{seo_head(t)}  <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="{p}styles.css" />

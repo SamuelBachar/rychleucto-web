@@ -54,13 +54,22 @@
       "/cz/*",
       "/de/*",
       "/en/*",
+      "/robots.txt",
+      "/sitemap.xml",
       "*.html",
       "*.css",
       "*.js",
+      "*.txt",
+      "*.xml",
+      "*.json",
       "*.png",
       "*.jpg",
+      "*.jpeg",
       "*.svg",
-      "*.webp"
+      "*.webp",
+      "*.ico",
+      "*.woff",
+      "*.woff2"
     ]
   }
 }
