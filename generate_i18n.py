@@ -119,7 +119,7 @@ LANGS = {
             "Export do Money S3 XML",
             "Export do OMEGA (TXT)",
         ],
-        "trademark_disclaimer": "Názvy MRP, POHODA, Money S3 a OMEGA sú ochrannými známkami ich príslušných vlastníkov. Táto aplikácia nie je s uvedenými spoločnosťami pridružená ani nimi schválená.",
+        "trademark_disclaimer": "Názvy MRP, POHODA, Money S3 a OMEGA sú ochrannými známkami ich príslušných vlastníkov. Sú uvedené výlučne na označenie kompatibility aplikácie s podporovanými formátmi importu.",
     },
     "cs": {
         "code": "cs",
@@ -233,7 +233,7 @@ LANGS = {
             "Export do Money S3 XML",
             "Export do OMEGA (TXT)",
         ],
-        "trademark_disclaimer": "Názvy MRP, POHODA, Money S3 a OMEGA jsou ochrannými známkami jejich příslušných vlastníků. Tato aplikace není s uvedenými společnostmi přidružená ani jimi schválená.",
+        "trademark_disclaimer": "Názvy MRP, POHODA, Money S3 a OMEGA jsou ochrannými známkami jejich příslušných vlastníků. Jsou uvedeny výhradně k označení kompatibility aplikace s podporovanými formáty importu.",
     },
     "de": {
         "code": "de",
@@ -347,7 +347,7 @@ LANGS = {
             "Export nach Money S3 XML",
             "Export nach OMEGA (TXT)",
         ],
-        "trademark_disclaimer": "Die Namen MRP, POHODA, Money S3 und OMEGA sind Marken ihrer jeweiligen Inhaber. Diese App ist mit den genannten Unternehmen weder verbunden noch von ihnen genehmigt.",
+        "trademark_disclaimer": "Die Namen MRP, POHODA, Money S3 und OMEGA sind Marken ihrer jeweiligen Inhaber. Sie dienen ausschließlich dem Hinweis auf die Kompatibilität der App mit den unterstützten Importformaten.",
     },
     "en": {
         "code": "en",
@@ -461,7 +461,7 @@ LANGS = {
             "Export to Money S3 XML",
             "Export to OMEGA (TXT)",
         ],
-        "trademark_disclaimer": "MRP, POHODA, Money S3 and OMEGA are trademarks of their respective owners. This app is not affiliated with or endorsed by those companies.",
+        "trademark_disclaimer": "MRP, POHODA, Money S3 and OMEGA are trademarks of their respective owners. They are used solely to indicate compatibility with the supported import formats.",
     },
 }
 
