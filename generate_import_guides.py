@@ -8,7 +8,10 @@ from ga import head_snippet as ga_head
 
 ROOT = Path(__file__).resolve().parent
 OUT = ROOT / "navod-importu"
-ASSET = "../assets/import-guides"
+# Absolute paths so pages keep the main site stylesheet even under /navod-importu/
+ASSET = "/assets/import-guides"
+CSS = "/styles.css"
+JS = "/site.js"
 
 APP = "RýchleÚčto"
 TRADEMARK = (
@@ -155,7 +158,7 @@ def page_shell(
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="{CSS}" />
 {ga_head()}
 </head>
 <body>
@@ -164,13 +167,18 @@ def page_shell(
   <div class="nav-inner">
     <a href="/" class="nav-logo">{APP}</a>
     <div class="nav-links">
-      <a href="/navod-importu/"{' class="active"' if active_slug is None else ""}>Návod importu</a>
+      <a href="/#screenshots">Aplikácia</a>
+      <a href="/#funkcie">Funkcie</a>
+      <a href="/#ako-to-funguje">Ako to funguje</a>
       <a href="/#kompatibilita">Kompatibilita</a>
+      <a href="/navod-importu/" class="active">Návod importu</a>
+      <a href="/#cennik">Cenník</a>
+      <a href="/#faq">FAQ</a>
       <a href="/privacy.html">Súkromie</a>
     </div>
     <div class="nav-actions">
-      <a href="/" class="btn btn-outline">← Domov</a>
-      <a href="/#download" class="btn btn-primary">Stiahnuť zadarmo</a>
+      <a href="/navod-importu/" class="btn btn-primary nav-guides-btn">Návod importu pre účtovníkov</a>
+      <a href="/#download" class="btn btn-outline">Stiahnuť zadarmo</a>
     </div>
   </div>
 </nav>
@@ -179,15 +187,32 @@ def page_shell(
 
 <footer>
   <div class="footer-inner">
-    <div class="footer-bottom" style="border-top:none;padding-top:0;">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div style="font-size:20px;font-weight:800;color:white;">{APP}</div>
+        <p>Mobilná aplikácia pre živnostníkov a malé firmy. Účtovníctvo za 60 sekúnd mesačne.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Aplikácia</h4>
+        <a href="/">Domov</a>
+        <a href="/#kompatibilita">Kompatibilita</a>
+        <a href="/navod-importu/">Návod importu</a>
+      </div>
+      <div class="footer-col">
+        <h4>Právne</h4>
+        <a href="/privacy.html">Zásady ochrany súkromia</a>
+        <a href="/terms.html">Obchodné podmienky</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
       <div>© 2026 {APP} — Joy IT Solution s.r.o.</div>
-      <div><a href="/navod-importu/" style="color:inherit;">Návod importu</a> · <a href="/" style="color:inherit;">Domov</a></div>
+      <div>🇸🇰 Slovenská republika</div>
     </div>
     <p class="footer-disclaimer">{TRADEMARK}</p>
   </div>
 </footer>
 
-<script src="../site.js" defer></script>
+<script src="{JS}" defer></script>
 </body>
 </html>
 """

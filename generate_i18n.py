@@ -120,6 +120,8 @@ LANGS = {
             ("Export do OMEGA (TXT)", "/navod-importu/omega.html"),
         ],
         "nav_guides": "Návod importu pre účtovníkov",
+        "compat_cta": "Návod importu pre účtovníkov",
+        "compat_cta_sub": "Screenshoty a postup pre Money S3, MRP, OMEGA a POHODA.",
         "trademark_disclaimer": "Názvy MRP, POHODA, Money S3 a OMEGA sú ochrannými známkami ich príslušných vlastníkov. Sú uvedené výlučne na označenie kompatibility aplikácie s podporovanými formátmi importu.",
     },
     "cs": {
@@ -235,6 +237,8 @@ LANGS = {
             ("Export do OMEGA (TXT)", "/navod-importu/omega.html"),
         ],
         "nav_guides": "Návod importu pro účetní",
+        "compat_cta": "Návod importu pro účetní",
+        "compat_cta_sub": "Screenshoty a postup pro Money S3, MRP, OMEGA a POHODA.",
         "trademark_disclaimer": "Názvy MRP, POHODA, Money S3 a OMEGA jsou ochrannými známkami jejich příslušných vlastníků. Jsou uvedeny výhradně k označení kompatibility aplikace s podporovanými formáty importu.",
     },
     "de": {
@@ -350,6 +354,8 @@ LANGS = {
             ("Export nach OMEGA (TXT)", "/navod-importu/omega.html"),
         ],
         "nav_guides": "Importanleitung für Buchhalter",
+        "compat_cta": "Importanleitung für Buchhalter",
+        "compat_cta_sub": "Screenshots und Anleitung für Money S3, MRP, OMEGA und POHODA.",
         "trademark_disclaimer": "Die Namen MRP, POHODA, Money S3 und OMEGA sind Marken ihrer jeweiligen Inhaber. Sie dienen ausschließlich dem Hinweis auf die Kompatibilität der App mit den unterstützten Importformaten.",
     },
     "en": {
@@ -465,6 +471,8 @@ LANGS = {
             ("Export to OMEGA (TXT)", "/navod-importu/omega.html"),
         ],
         "nav_guides": "Import guide for accountants",
+        "compat_cta": "Import guide for accountants",
+        "compat_cta_sub": "Screenshots and steps for Money S3, MRP, OMEGA and POHODA.",
         "trademark_disclaimer": "MRP, POHODA, Money S3 and OMEGA are trademarks of their respective owners. They are used solely to indicate compatibility with the supported import formats.",
     },
 }
@@ -538,7 +546,11 @@ def compat_html(t: dict) -> str:
     )
     return f"""      <ul class="compat-list">
 {items}
-      </ul>"""
+      </ul>
+      <div class="compat-cta">
+        <a href="/navod-importu/" class="btn btn-primary btn-lg">{t['compat_cta']}</a>
+        <p>{t['compat_cta_sub']}</p>
+      </div>"""
 
 
 def _json_escape(value: str) -> str:
@@ -667,8 +679,8 @@ def render(t: dict) -> str:
     </div>
     <div class="nav-actions">
       {lang_switch(t['code'] if t['code'] != 'cs' else 'cs', p)}
-      <a href="/navod-importu/" class="btn btn-outline nav-guides-btn">{t['nav_guides']}</a>
-      <a href="#download" class="btn btn-primary">{t['cta_nav']}</a>
+      <a href="/navod-importu/" class="btn btn-primary nav-guides-btn">{t['nav_guides']}</a>
+      <a href="#download" class="btn btn-outline">{t['cta_nav']}</a>
     </div>
   </div>
 </nav>

@@ -294,6 +294,18 @@ body.lightbox-open { overflow: hidden; }
   color: var(--primary);
   border-bottom-color: var(--primary);
 }
+.compat-cta {
+  margin: 8px 0 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+.compat-cta p {
+  font-size: 14px;
+  color: var(--text-sec);
+  margin: 0;
+}
 .trademark-disclaimer {
   font-size: 12px;
   line-height: 1.6;
