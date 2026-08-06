@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Import do POHODA — RýchleÚčto</title>
+  <meta name="description" content="Návod na XML import dokladov z RýchleÚčto do programu POHODA." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.rychleucto.sk/navod-importu/pohoda.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F0DHNS74KT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F0DHNS74KT');
+  </script>
+
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">RýchleÚčto</a>
+    <div class="nav-links">
+      <a href="/navod-importu/">Návod importu</a>
+      <a href="/#kompatibilita">Kompatibilita</a>
+      <a href="/privacy.html">Súkromie</a>
+    </div>
+    <div class="nav-actions">
+      <a href="/" class="btn btn-outline">← Domov</a>
+      <a href="/#download" class="btn btn-primary">Stiahnuť zadarmo</a>
+    </div>
+  </div>
+</nav>
+
+
+<div class="guide-hero">
+  <div class="section-inner">
+    <div class="section-label">Návod importu</div>
+    <h1 class="section-title">Import do POHODA</h1>
+    <p class="section-sub">V mesačnom ZIP nájdete súbor <code>pohoda_import.xml</code>.</p>
+    <div class="guide-pills">
+      <a href="/navod-importu/" class="guide-pill">← Všetky softvéry</a>
+      <a href="money-s3.html" class="guide-pill">Money S3</a><a href="mrp.html" class="guide-pill">MRP</a><a href="omega.html" class="guide-pill">OMEGA</a><a href="pohoda.html" class="guide-pill active">POHODA</a>
+    </div>
+  </div>
+</div>
+
+<div class="section-inner guide-content">
+  <section class="guide-section">
+    <h2>Postup importu</h2>
+    <div class="guide-shots">
+      <figure class="guide-shot">
+        <a href="../assets/import-guides/pohoda/01.png" class="shot-link" data-lightbox aria-label="POHODA XML spracovanie — krok 1">
+          <img src="../assets/import-guides/pohoda/01.png" alt="POHODA XML spracovanie — krok 1" loading="lazy" />
+        </a>
+        <figcaption>Krok 1</figcaption>
+      </figure>
+    </div>
+    <h2>Zahájenie XML spracovania</h2>
+    <p>Na prvej strane sprievodcu najskôr vyberte typ XML spracovania, ktorým je definované, či bude vykonaný XML import/export jedného konkrétneho súboru alebo viacerých súborov. V prípade exportu konkrétneho XML súboru zaškrtnite voľbu <strong>Súbor</strong>. Výberom voľby <strong>Zložka</strong> určíte, že chcete vykonať import alebo export viacerých XML súborov naraz.</p>
+    <p>V poli <strong>Vstupný priečinok alebo súbor (request)</strong> zvoľte cestu k XML súborom. V prípade, že ste vybrali možnosť Zložka, skontroluje POHODA všetky XML súbory v tejto zložke, a ak obsahujú platný dataPack, budú spracované.</p>
+    <p>XML komunikácia programu POHODA umožňuje aktualizovať i zmazať záznam v programe POHODA.</p>
+    <p>V poli <strong>Výstupný priečinok alebo súbor (response)</strong> vyberte cestu k priečinku alebo súboru, kde bude dochádzať k ukladaniu už spracovaných XML súborov. V tomto priečinku môžete nájsť výsledky s exportovanými alebo importovanými dokladmi. Ak cesta pre výstupný priečinok alebo súbor nebude vyplnená, dôjde k vyplneniu tohto údaja automaticky na základe údajov uvedených v poli Vstupný priečinok alebo súbor. V tomto umiestnení sa vytvorí podpriečinok <strong>Response</strong>, v ktorom bude možné nájsť výsledky XML spracovania súborov.</p>
+    <p>Ak chcete používať nepovinnú voľbu <strong>Kontrola duplicity dávok</strong>, zaškrtnite ju. POHODA bude kontrolovať, či už zadaný doklad nebol importovaný. Ak áno, import neprebehne a vo výstupnom priečinku alebo súbore dôjde k zobrazeniu hlásenia o duplicite tohto dokladu. Kontrola prebieha na základe atribútu id, elementu dataPack a atribútu id, elementu dataPackItem.</p>
+    <h2>Výsledok XML spracovania</h2>
+    <p>Na poslednej strane sprievodcu môžete zistiť výsledok XML spracovania a pomocou tlačidla <strong>Otvoriť cieľový priečinok</strong> otvoríte výstupný priečinok (Response), v ktorom sú k dispozícii výsledky XML spracovania.</p>
+    <p>Po dokončení sprievodcu importom, resp. exportom XML, je možné zistiť výsledok XML spracovania v agende <strong>XML log</strong>. Tu je možné otvoriť ako cieľový (Response), tak i zdrojový súbor (Request) cez miestnu ponuku.</p>
+  </section>
+</div>
+
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-bottom" style="border-top:none;padding-top:0;">
+      <div>© 2026 RýchleÚčto — Joy IT Solution s.r.o.</div>
+      <div><a href="/navod-importu/" style="color:inherit;">Návod importu</a> · <a href="/" style="color:inherit;">Domov</a></div>
+    </div>
+    <p class="footer-disclaimer">Názvy MRP, POHODA, Money S3 a OMEGA sú ochrannými známkami ich príslušných vlastníkov. Sú uvedené výlučne na označenie kompatibility aplikácie s podporovanými formátmi importu.</p>
+  </div>
+</footer>
+
+<script src="../site.js" defer></script>
+</body>
+</html>

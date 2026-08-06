@@ -114,11 +114,12 @@ LANGS = {
         "compat_title": "Export pre účtovné softvéry",
         "compat_sub": "Mesačný balík obsahuje importné súbory pripravené pre bežné účtovné systémy.",
         "compat_items": [
-            "Export do MRP XML 2.0",
-            "Export do POHODA XML",
-            "Export do Money S3 XML",
-            "Export do OMEGA (TXT)",
+            ("Export do MRP XML 2.0", "/navod-importu/mrp.html"),
+            ("Export do POHODA XML", "/navod-importu/pohoda.html"),
+            ("Export do Money S3 XML", "/navod-importu/money-s3.html"),
+            ("Export do OMEGA (TXT)", "/navod-importu/omega.html"),
         ],
+        "nav_guides": "Návod importu pre účtovníkov",
         "trademark_disclaimer": "Názvy MRP, POHODA, Money S3 a OMEGA sú ochrannými známkami ich príslušných vlastníkov. Sú uvedené výlučne na označenie kompatibility aplikácie s podporovanými formátmi importu.",
     },
     "cs": {
@@ -228,11 +229,12 @@ LANGS = {
         "compat_title": "Export pro účetní softwary",
         "compat_sub": "Měsíční balíček obsahuje importní soubory připravené pro běžné účetní systémy.",
         "compat_items": [
-            "Export do MRP XML 2.0",
-            "Export do POHODA XML",
-            "Export do Money S3 XML",
-            "Export do OMEGA (TXT)",
+            ("Export do MRP XML 2.0", "/navod-importu/mrp.html"),
+            ("Export do POHODA XML", "/navod-importu/pohoda.html"),
+            ("Export do Money S3 XML", "/navod-importu/money-s3.html"),
+            ("Export do OMEGA (TXT)", "/navod-importu/omega.html"),
         ],
+        "nav_guides": "Návod importu pro účetní",
         "trademark_disclaimer": "Názvy MRP, POHODA, Money S3 a OMEGA jsou ochrannými známkami jejich příslušných vlastníků. Jsou uvedeny výhradně k označení kompatibility aplikace s podporovanými formáty importu.",
     },
     "de": {
@@ -342,11 +344,12 @@ LANGS = {
         "compat_title": "Export für Buchhaltungssoftware",
         "compat_sub": "Das Monatspaket enthält Importdateien für gängige Buchhaltungssysteme.",
         "compat_items": [
-            "Export nach MRP XML 2.0",
-            "Export nach POHODA XML",
-            "Export nach Money S3 XML",
-            "Export nach OMEGA (TXT)",
+            ("Export nach MRP XML 2.0", "/navod-importu/mrp.html"),
+            ("Export nach POHODA XML", "/navod-importu/pohoda.html"),
+            ("Export nach Money S3 XML", "/navod-importu/money-s3.html"),
+            ("Export nach OMEGA (TXT)", "/navod-importu/omega.html"),
         ],
+        "nav_guides": "Importanleitung für Buchhalter",
         "trademark_disclaimer": "Die Namen MRP, POHODA, Money S3 und OMEGA sind Marken ihrer jeweiligen Inhaber. Sie dienen ausschließlich dem Hinweis auf die Kompatibilität der App mit den unterstützten Importformaten.",
     },
     "en": {
@@ -456,11 +459,12 @@ LANGS = {
         "compat_title": "Export for accounting software",
         "compat_sub": "The monthly bundle includes import files prepared for common accounting systems.",
         "compat_items": [
-            "Export to MRP XML 2.0",
-            "Export to POHODA XML",
-            "Export to Money S3 XML",
-            "Export to OMEGA (TXT)",
+            ("Export to MRP XML 2.0", "/navod-importu/mrp.html"),
+            ("Export to POHODA XML", "/navod-importu/pohoda.html"),
+            ("Export to Money S3 XML", "/navod-importu/money-s3.html"),
+            ("Export to OMEGA (TXT)", "/navod-importu/omega.html"),
         ],
+        "nav_guides": "Import guide for accountants",
         "trademark_disclaimer": "MRP, POHODA, Money S3 and OMEGA are trademarks of their respective owners. They are used solely to indicate compatibility with the supported import formats.",
     },
 }
@@ -528,7 +532,10 @@ def faq_html(t: dict) -> str:
 
 
 def compat_html(t: dict) -> str:
-    items = "\n".join(f"        <li>{item}</li>" for item in t["compat_items"])
+    items = "\n".join(
+        f'        <li><a href="{href}">{label}</a></li>'
+        for label, href in t["compat_items"]
+    )
     return f"""      <ul class="compat-list">
 {items}
       </ul>"""
@@ -660,6 +667,7 @@ def render(t: dict) -> str:
     </div>
     <div class="nav-actions">
       {lang_switch(t['code'] if t['code'] != 'cs' else 'cs', p)}
+      <a href="/navod-importu/" class="btn btn-outline nav-guides-btn">{t['nav_guides']}</a>
       <a href="#download" class="btn btn-primary">{t['cta_nav']}</a>
     </div>
   </div>
@@ -825,6 +833,7 @@ def render(t: dict) -> str:
         <a href="#funkcie">{t['nav_features']}</a>
         <a href="#ako-to-funguje">{t['nav_how']}</a>
         <a href="#kompatibilita">{t['compat_label']}</a>
+        <a href="/navod-importu/">{t['nav_guides']}</a>
         <a href="#cennik">{t['nav_pricing']}</a>
         <a href="#faq">{t['nav_faq']}</a>
       </div>

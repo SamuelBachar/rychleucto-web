@@ -46,6 +46,11 @@
       "route": "/en",
       "redirect": "/en/",
       "statusCode": 301
+    },
+    {
+      "route": "/navod-importu",
+      "redirect": "/navod-importu/",
+      "statusCode": 301
     }
   ],
   "navigationFallback": {
@@ -54,6 +59,8 @@
       "/cz/*",
       "/de/*",
       "/en/*",
+      "/navod-importu/*",
+      "/assets/*",
       "/robots.txt",
       "/sitemap.xml",
       "*.html",
