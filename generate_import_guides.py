@@ -177,8 +177,8 @@ def page_shell(
       <a href="/privacy.html">Súkromie</a>
     </div>
     <div class="nav-actions">
-      <a href="/navod-importu/" class="btn btn-primary nav-guides-btn">Návod importu pre účtovníkov</a>
-      <a href="/#download" class="btn btn-outline">Stiahnuť zadarmo</a>
+      <a href="/navod-importu/" class="nav-guides-link">Návod importu</a>
+      <a href="/#download" class="btn btn-primary nav-cta-btn">Stiahnuť zadarmo</a>
     </div>
   </div>
 </nav>

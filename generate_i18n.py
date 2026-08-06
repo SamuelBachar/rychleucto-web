@@ -119,7 +119,7 @@ LANGS = {
             ("Export do Money S3 XML", "/navod-importu/money-s3.html"),
             ("Export do OMEGA (TXT)", "/navod-importu/omega.html"),
         ],
-        "nav_guides": "Návod importu pre účtovníkov",
+        "nav_guides": "Návod importu",
         "compat_cta": "Návod importu pre účtovníkov",
         "compat_cta_sub": "Screenshoty a postup pre Money S3, MRP, OMEGA a POHODA.",
         "trademark_disclaimer": "Názvy MRP, POHODA, Money S3 a OMEGA sú ochrannými známkami ich príslušných vlastníkov. Sú uvedené výlučne na označenie kompatibility aplikácie s podporovanými formátmi importu.",
@@ -236,7 +236,7 @@ LANGS = {
             ("Export do Money S3 XML", "/navod-importu/money-s3.html"),
             ("Export do OMEGA (TXT)", "/navod-importu/omega.html"),
         ],
-        "nav_guides": "Návod importu pro účetní",
+        "nav_guides": "Návod importu",
         "compat_cta": "Návod importu pro účetní",
         "compat_cta_sub": "Screenshoty a postup pro Money S3, MRP, OMEGA a POHODA.",
         "trademark_disclaimer": "Názvy MRP, POHODA, Money S3 a OMEGA jsou ochrannými známkami jejich příslušných vlastníků. Jsou uvedeny výhradně k označení kompatibility aplikace s podporovanými formáty importu.",
@@ -353,7 +353,7 @@ LANGS = {
             ("Export nach Money S3 XML", "/navod-importu/money-s3.html"),
             ("Export nach OMEGA (TXT)", "/navod-importu/omega.html"),
         ],
-        "nav_guides": "Importanleitung für Buchhalter",
+        "nav_guides": "Importanleitung",
         "compat_cta": "Importanleitung für Buchhalter",
         "compat_cta_sub": "Screenshots und Anleitung für Money S3, MRP, OMEGA und POHODA.",
         "trademark_disclaimer": "Die Namen MRP, POHODA, Money S3 und OMEGA sind Marken ihrer jeweiligen Inhaber. Sie dienen ausschließlich dem Hinweis auf die Kompatibilität der App mit den unterstützten Importformaten.",
@@ -470,7 +470,7 @@ LANGS = {
             ("Export to Money S3 XML", "/navod-importu/money-s3.html"),
             ("Export to OMEGA (TXT)", "/navod-importu/omega.html"),
         ],
-        "nav_guides": "Import guide for accountants",
+        "nav_guides": "Import guide",
         "compat_cta": "Import guide for accountants",
         "compat_cta_sub": "Screenshots and steps for Money S3, MRP, OMEGA and POHODA.",
         "trademark_disclaimer": "MRP, POHODA, Money S3 and OMEGA are trademarks of their respective owners. They are used solely to indicate compatibility with the supported import formats.",
@@ -679,8 +679,8 @@ def render(t: dict) -> str:
     </div>
     <div class="nav-actions">
       {lang_switch(t['code'] if t['code'] != 'cs' else 'cs', p)}
-      <a href="/navod-importu/" class="btn btn-primary nav-guides-btn">{t['nav_guides']}</a>
-      <a href="#download" class="btn btn-outline">{t['cta_nav']}</a>
+      <a href="/navod-importu/" class="nav-guides-link">{t['nav_guides']}</a>
+      <a href="#download" class="btn btn-primary nav-cta-btn">{t['cta_nav']}</a>
     </div>
   </div>
 </nav>
