@@ -465,8 +465,25 @@ LANGS = {
     },
 }
 
-PLAY = "https://play.google.com/store/apps/details?id=sk.rychleucto.rychleucto"
-IOS = "https://apps.apple.com/sk/app/scan2accountant/id6788722506"
+def play_url(code: str) -> str:
+    """Localized Play Store link — works on desktop web and opens Play app on phone."""
+    hl_gl = {
+        "sk": ("sk", "SK"),
+        "cs": ("cs", "CZ"),
+        "de": ("de", "DE"),
+        "en": ("en", "US"),
+    }
+    hl, gl = hl_gl.get(code, ("sk", "SK"))
+    return (
+        "https://play.google.com/store/apps/details?"
+        f"id=sk.rychleucto.rychleucto&hl={hl}&gl={gl}"
+    )
+
+
+def ios_url(code: str) -> str:
+    """Localized App Store link — country storefront in the path."""
+    country = {"sk": "sk", "cs": "cz", "de": "de", "en": "us"}.get(code, "sk")
+    return f"https://apps.apple.com/{country}/app/scan2accountant/id6788722506"
 
 
 def lang_switch(active: str, prefix: str) -> str:
@@ -536,8 +553,8 @@ def seo_head(t: dict) -> str:
         "en": "en_US",
     }.get(t["code"], "sk_SK")
     image = "https://www.rychleucto.sk/hero.png"
-    play = "https://play.google.com/store/apps/details?id=sk.rychleucto.rychleucto"
-    ios = "https://apps.apple.com/sk/app/scan2accountant/id6788722506"
+    play = play_url(t["code"])
+    ios = ios_url(t["code"])
 
     faq_entities = []
     for q, a in t["faq"]:
@@ -607,6 +624,8 @@ def seo_head(t: dict) -> str:
 
 def render(t: dict) -> str:
     p = t["prefix"]
+    play = play_url(t["code"])
+    ios = ios_url(t["code"])
     return f"""<!DOCTYPE html>
 <html lang="{t['html_lang']}">
 <head>
@@ -653,8 +672,8 @@ def render(t: dict) -> str:
       <h1>{t['h1_html']}</h1>
       <p>{t['hero_p']}</p>
       <div class="hero-cta">
-        <a href="{PLAY}" class="btn btn-primary btn-lg">{t['btn_play']}</a>
-        <a href="{IOS}" class="btn btn-app-store btn-lg">{t['btn_ios']}</a>
+        <a href="{play}" class="btn btn-primary btn-lg">{t['btn_play']}</a>
+        <a href="{ios}" class="btn btn-app-store btn-lg">{t['btn_ios']}</a>
         <a href="#ako-to-funguje" class="btn btn-outline btn-lg">{t['btn_how']}</a>
       </div>
     </div>
@@ -787,8 +806,8 @@ def render(t: dict) -> str:
   <h2>{t['cta_title']}</h2>
   <p>{t['cta_p']}</p>
   <div class="store-buttons">
-    <a href="{PLAY}" class="btn btn-white btn-lg">{t['btn_play']}</a>
-    <a href="{IOS}" class="btn btn-white btn-lg" style="color:#111827;">{t['btn_ios']}</a>
+    <a href="{play}" class="btn btn-white btn-lg">{t['btn_play']}</a>
+    <a href="{ios}" class="btn btn-white btn-lg" style="color:#111827;">{t['btn_ios']}</a>
   </div>
 </section>
 
