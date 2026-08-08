@@ -607,6 +607,29 @@ footer {
   line-height: 1.55;
 }
 
+/* ── Ukážka výsledku exportu ───────────────────────────────────────────────── */
+/* Sedí medzi "Ako to funguje" (končí na #E0F2FE) a bielou sekciou "Funkcie",
+   takže gradient plynulo prejde z modrej do bielej a obrázok, ktorý má rovnakú
+   hero paletu, do stránky zapadne bez viditeľného švíku. */
+.result-bg {
+  background: linear-gradient(180deg, #E0F2FE 0%, #EBF3FF 34%, #F6FAFF 70%, #FFFFFF 100%);
+  padding: 64px 24px 76px;
+}
+.result-inner { max-width: 1240px; }
+.result-figure { margin: 0; }
+.result-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 22px;
+  border: 1px solid rgba(26,86,219,.14);
+  box-shadow: 0 30px 70px rgba(26,86,219,.20), 0 2px 8px rgba(17,24,39,.06);
+}
+@media (max-width: 640px) {
+  .result-bg { padding: 40px 14px 48px; }
+  .result-figure img { border-radius: 12px; }
+}
+
 @media (max-width: 1100px) {
   .nav-links { display: none; }
 }

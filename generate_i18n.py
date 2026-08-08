@@ -40,6 +40,9 @@ LANGS = {
         "video_a11y": "Promo video aplikácie RýchleÚčto",
         "video_fallback": "Váš prehliadač nepodporuje video. Stiahnuť video",
         "video_note": "Dĺžka 1:16 — zvuk si zapnete priamo v prehrávači.",
+        "export_img": "vysledok-exportu-sk.webp",
+        "export_img_h": "1209",
+        "export_img_alt": "Ukážka výsledku exportu — e-mail s mesačným balíkom a obsah ZIP súboru: importné súbory pre POHODA, Money S3, MRP, OMEGA a ISDOC, CSV, PDF report a originály dokladov.",
         "shot_alt": "Náhľad aplikácie {n}",
         "how_label": "Ako to funguje",
         "how_title": "Tri jednoduché kroky",
@@ -163,6 +166,9 @@ LANGS = {
         "video_a11y": "Promo video aplikace ÚčtoSkenExport",
         "video_fallback": "Váš prohlížeč nepodporuje video. Stáhnout video",
         "video_note": "Délka 1:16 — zvuk si zapnete přímo v přehrávači.",
+        "export_img": "vysledok-exportu-cz.webp",
+        "export_img_h": "1209",
+        "export_img_alt": "Ukázka výsledku exportu — e-mail s měsíčním balíčkem a obsah ZIP souboru: importní soubory pro POHODA, Money S3, MRP, OMEGA a ISDOC, CSV, PDF report a originály dokladů.",
         "shot_alt": "Náhled aplikace {n}",
         "how_label": "Jak to funguje",
         "how_title": "Tři jednoduché kroky",
@@ -286,6 +292,9 @@ LANGS = {
         "video_a11y": "Promo-Video der App SchnellBelegio",
         "video_fallback": "Ihr Browser unterstützt kein Video. Video herunterladen",
         "video_note": "Länge 1:16 — den Ton schalten Sie direkt im Player ein.",
+        "export_img": "vysledok-exportu-de.webp",
+        "export_img_h": "1239",
+        "export_img_alt": "Beispiel des Exportergebnisses — E-Mail mit dem Monatspaket und der Inhalt der ZIP-Datei: Importdateien für POHODA, Money S3, MRP, OMEGA und ISDOC, CSV, PDF-Report und Originalbelege.",
         "shot_alt": "App-Screenshot {n}",
         "how_label": "So funktioniert's",
         "how_title": "Drei einfache Schritte",
@@ -409,6 +418,9 @@ LANGS = {
         "video_a11y": "Scan2Accountant promo video",
         "video_fallback": "Your browser does not support video. Download the video",
         "video_note": "Runs 1:16 — turn the sound on in the player.",
+        "export_img": "vysledok-exportu-en.webp",
+        "export_img_h": "1209",
+        "export_img_alt": "Example of the export result — the e-mail with the monthly package and the contents of the ZIP file: import files for POHODA, Money S3, MRP, OMEGA and ISDOC, CSV, a PDF report and the original documents.",
         "shot_alt": "App screenshot {n}",
         "how_label": "How it works",
         "how_title": "Three simple steps",
@@ -776,6 +788,14 @@ def render(t: dict) -> str:
         <p>{t['step3_p']}</p>
       </div>
     </div>
+  </div>
+</section>
+
+<section id="vysledok-exportu" class="result-bg">
+  <div class="section-inner result-inner">
+    <figure class="result-figure">
+      <img src="{p}assets/export/{t['export_img']}" alt="{t['export_img_alt']}" loading="lazy" width="1600" height="{t['export_img_h']}" />
+    </figure>
   </div>
 </section>
 
