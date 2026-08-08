@@ -34,6 +34,12 @@ LANGS = {
         "screens_label": "Aplikácia",
         "screens_title": "Pozrite si, ako to vyzerá",
         "screens_sub": "Skutočné obrazovky z aplikácie — od skenovania po mesačný export.",
+        "video_label": "Video",
+        "video_title": "RýchleÚčto v akcii",
+        "video_sub": "Celý proces na jednom videu — od odfotenia faktúry po mesačný balík pripravený pre účtovníka.",
+        "video_a11y": "Promo video aplikácie RýchleÚčto",
+        "video_fallback": "Váš prehliadač nepodporuje video. Stiahnuť video",
+        "video_note": "Dĺžka 1:16 — zvuk si zapnete priamo v prehrávači.",
         "shot_alt": "Náhľad aplikácie {n}",
         "how_label": "Ako to funguje",
         "how_title": "Tri jednoduché kroky",
@@ -151,6 +157,12 @@ LANGS = {
         "screens_label": "Aplikace",
         "screens_title": "Podívejte se, jak to vypadá",
         "screens_sub": "Skutečné obrazovky z aplikace — od skenování po měsíční export.",
+        "video_label": "Video",
+        "video_title": "ÚčtoSkenExport v akci",
+        "video_sub": "Celý proces na jednom videu — od vyfocení faktury po měsíční balíček připravený pro účetní.",
+        "video_a11y": "Promo video aplikace ÚčtoSkenExport",
+        "video_fallback": "Váš prohlížeč nepodporuje video. Stáhnout video",
+        "video_note": "Délka 1:16 — zvuk si zapnete přímo v přehrávači.",
         "shot_alt": "Náhled aplikace {n}",
         "how_label": "Jak to funguje",
         "how_title": "Tři jednoduché kroky",
@@ -268,6 +280,12 @@ LANGS = {
         "screens_label": "App",
         "screens_title": "So sieht die App aus",
         "screens_sub": "Echte Screenshots — vom Scan bis zum Monatsexport.",
+        "video_label": "Video",
+        "video_title": "SchnellBelegio in Aktion",
+        "video_sub": "Der ganze Ablauf in einem Video — vom Foto der Rechnung bis zum fertigen Monatspaket für die Buchhaltung.",
+        "video_a11y": "Promo-Video der App SchnellBelegio",
+        "video_fallback": "Ihr Browser unterstützt kein Video. Video herunterladen",
+        "video_note": "Länge 1:16 — den Ton schalten Sie direkt im Player ein.",
         "shot_alt": "App-Screenshot {n}",
         "how_label": "So funktioniert's",
         "how_title": "Drei einfache Schritte",
@@ -385,6 +403,12 @@ LANGS = {
         "screens_label": "App",
         "screens_title": "See how it looks",
         "screens_sub": "Real screenshots — from scanning to the monthly export.",
+        "video_label": "Video",
+        "video_title": "Scan2Accountant in action",
+        "video_sub": "The whole flow in one video — from photographing an invoice to the monthly package ready for your accountant.",
+        "video_a11y": "Scan2Accountant promo video",
+        "video_fallback": "Your browser does not support video. Download the video",
+        "video_note": "Runs 1:16 — turn the sound on in the player.",
         "shot_alt": "App screenshot {n}",
         "how_label": "How it works",
         "how_title": "Three simple steps",
@@ -700,6 +724,23 @@ def render(t: dict) -> str:
     <div class="hero-image">
       <img src="{p}hero.png" alt="{t['hero_alt']}" loading="eager" />
     </div>
+  </div>
+</section>
+
+<section id="video" class="video-bg">
+  <div class="section-inner">
+    <div class="section-label">{t['video_label']}</div>
+    <h2 class="section-title">{t['video_title']}</h2>
+    <p class="section-sub">{t['video_sub']}</p>
+    <div class="video-stage">
+      <div class="video-frame">
+        <video class="promo-video" controls playsinline preload="none" poster="{p}assets/video/promo-poster.jpg" width="720" height="1280" aria-label="{t['video_a11y']}">
+          <source src="{p}assets/video/rychleucto-promo.mp4" type="video/mp4" />
+          <a href="{p}assets/video/rychleucto-promo.mp4">{t['video_fallback']}</a>
+        </video>
+      </div>
+    </div>
+    <p class="video-note">{t['video_note']}</p>
   </div>
 </section>
 

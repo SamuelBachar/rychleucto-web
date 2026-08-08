@@ -149,7 +149,107 @@ section { padding: 80px 24px; }
 .section-title { font-size: clamp(28px, 4vw, 40px); font-weight: 800; line-height: 1.2; margin-bottom: 16px; }
 .section-sub { font-size: 17px; color: var(--text-sec); max-width: 560px; line-height: 1.7; margin-bottom: 48px; }
 
-.screenshots-bg { background: #0B1220; color: white; }
+/* ── Promo video ──────────────────────────────────────────────────────────── */
+/* The video sits between the light hero and the dark screenshots band. Its top
+   edge fades from the hero blue into #0B1220, and its bottom stays #0B1220 so
+   it merges seamlessly with the screenshots section below — the two read as
+   one continuous dark band. */
+.video-bg {
+  position: relative;
+  background: #0B1220;
+  color: white;
+  padding: 230px 24px 60px;
+  overflow: hidden;
+}
+.video-bg::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 190px;
+  background: linear-gradient(180deg,
+    #E4EBFA 0%,
+    #C3D2F0 20%,
+    #7E92C0 45%,
+    #3C4C71 70%,
+    #16223A 88%,
+    #0B1220 100%);
+  pointer-events: none;
+}
+.video-bg .section-inner { position: relative; z-index: 1; text-align: center; }
+.video-bg .section-label { color: #93C5FD; }
+.video-bg .section-title { color: white; }
+.video-bg .section-sub {
+  color: rgba(255,255,255,.72);
+  max-width: 620px;
+  margin: 0 auto 48px;
+}
+.video-stage {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+/* Soft blue glow so the portrait video does not float in a flat black field. */
+.video-stage::before {
+  content: "";
+  position: absolute;
+  top: 50%; left: 50%;
+  width: min(860px, 96vw);
+  height: min(860px, 96vw);
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle,
+    rgba(26,86,219,.40) 0%,
+    rgba(26,86,219,.14) 42%,
+    rgba(11,18,32,0) 70%);
+  pointer-events: none;
+}
+.video-frame {
+  position: relative;
+  width: min(360px, 78vw);
+  padding: 10px;
+  border-radius: 40px;
+  background: linear-gradient(160deg, rgba(255,255,255,.18) 0%, rgba(255,255,255,.05) 45%, rgba(255,255,255,.10) 100%);
+  border: 1px solid rgba(255,255,255,.16);
+  box-shadow: 0 40px 90px rgba(0,0,0,.6), 0 0 60px rgba(26,86,219,.22);
+}
+.video-frame video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 30px;
+  background: #000;
+}
+.video-note {
+  position: relative;
+  z-index: 1;
+  margin-top: 30px;
+  font-size: 14px;
+  color: rgba(255,255,255,.5);
+}
+
+.video-bg + .screenshots-bg { padding-top: 56px; }
+
+.screenshots-bg {
+  position: relative;
+  background: #0B1220;
+  color: white;
+  padding-bottom: 200px;
+}
+/* Fade the dark band back into the light "Ako to funguje" section. */
+.screenshots-bg::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 160px;
+  background: linear-gradient(180deg,
+    rgba(11,18,32,0) 0%,
+    #16223A 28%,
+    #3C4C71 48%,
+    #93A9D2 72%,
+    #DCEAF8 90%,
+    #F0F9FF 100%);
+  pointer-events: none;
+}
+.screenshots-bg .section-inner { position: relative; z-index: 1; }
 .screenshots-bg .section-label { color: #93C5FD; }
 .screenshots-bg .section-title { color: white; }
 .screenshots-bg .section-sub { color: rgba(255,255,255,.7); max-width: 640px; }
@@ -519,4 +619,19 @@ footer {
 @media (max-width: 640px) {
   .nav-guides-link { display: none; }
   .lang-switch a { padding: 6px 8px; }
+}
+
+@media (max-width: 900px) {
+  .video-bg { padding: 190px 24px 48px; }
+  .video-bg::before { height: 150px; }
+  .video-bg + .screenshots-bg { padding-top: 44px; }
+  .screenshots-bg { padding-bottom: 170px; }
+}
+@media (max-width: 640px) {
+  .video-bg { padding: 160px 20px 40px; }
+  .video-bg::before { height: 120px; }
+  .video-frame { width: min(300px, 84vw); padding: 8px; border-radius: 34px; }
+  .video-frame video { border-radius: 26px; }
+  .screenshots-bg::after { height: 120px; }
+  .screenshots-bg { padding-bottom: 140px; }
 }

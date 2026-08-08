@@ -75,6 +75,7 @@
       "*.jpeg",
       "*.svg",
       "*.webp",
+      "*.mp4",
       "*.ico",
       "*.woff",
       "*.woff2"
