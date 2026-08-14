@@ -714,3 +714,59 @@ footer {
   color: var(--primary, #1A56DB);
   line-height: 1.3;
 }
+
+/* ── Dnes vs. s RýchleÚčto ──────────────────────────────────────────── */
+.cmp-bg {
+  background: var(--card, #f8fafc);
+}
+.cmp-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 900px;
+  margin: 32px auto 0;
+}
+.cmp-col {
+  border-radius: 16px;
+  padding: 28px 28px 22px;
+  text-align: left;
+}
+.cmp-col h3 {
+  margin: 0 0 16px;
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+.cmp-col ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.cmp-col li {
+  padding: 9px 0;
+  font-size: 1rem;
+  line-height: 1.45;
+}
+.cmp-col li + li {
+  border-top: 1px dashed rgba(100, 116, 139, 0.25);
+}
+.cmp-today {
+  background: #fff;
+  border: 1px solid #fecaca;
+}
+.cmp-today h3 { color: #b91c1c; }
+.cmp-app {
+  background: #fff;
+  border: 2px solid var(--primary, #1A56DB);
+  box-shadow: 0 10px 30px rgba(26, 86, 219, 0.12);
+}
+.cmp-app h3 { color: var(--primary, #1A56DB); }
+.cmp-closing {
+  margin: 26px auto 0;
+  text-align: center;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--primary, #1A56DB);
+}
+@media (max-width: 720px) {
+  .cmp-grid { grid-template-columns: 1fr; }
+}

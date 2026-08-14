@@ -30,6 +30,13 @@ LANGS = {
         "hero_soft_row": "POHODA · Money S3 · MRP · OMEGA · OBERON · ISDOC",
         "privacy_strip_items": "Bez cloudu|Bez registrácie|Bez účtu|Bez zdieľania dát s nami",
         "privacy_strip_line": "Doklady zostávajú vo vašom telefóne. Export pošlete účtovníkovi ľahko, jedným klikom.",
+        "cmp_label": "Poznáte to?",
+        "cmp_title": "Dnes vs. s RýchleÚčto",
+        "cmp_today_h": "Dnes (bez appky)",
+        "cmp_app_h": "S RýchleÚčto",
+        "cmp_today_items": "📸 Bloček skončí v peňaženke a vybledne|📧 Faktúry roztrúsené po e-mailoch|📱 Niečo pošlete účtovníčke cez WhatsApp|😰 Koniec mesiaca = večer hľadania dokladov",
+        "cmp_app_items": "📸 Odfotíte ho hneď pri pokladni|🧠 Appka rozpozná sumu, DPH aj dodávateľa|🗂️ Všetko je na jednom mieste v telefóne|📤 Jeden klik a účtovník má celý balík",
+        "cmp_closing": "Takto vyzerá 60 sekúnd namiesto hodín.",
         "btn_play": "📱 Stiahnuť z Google Play (Android)",
         "btn_ios": "🍎 Stiahnuť z App Store (iPhone)",
         "btn_how": "Ako to funguje?",
@@ -162,6 +169,13 @@ LANGS = {
         "hero_soft_row": "POHODA · Money S3 · MRP · OMEGA · OBERON · ISDOC",
         "privacy_strip_items": "Bez cloudu|Bez registrace|Bez účtu|Bez sdílení dat s námi",
         "privacy_strip_line": "Doklady zůstávají ve vašem telefonu. Export pošlete účetnímu snadno, jedním klikem.",
+        "cmp_label": "Znáte to?",
+        "cmp_title": "Dnes vs. s RýchleÚčto",
+        "cmp_today_h": "Dnes (bez appky)",
+        "cmp_app_h": "S RýchleÚčto",
+        "cmp_today_items": "📸 Účtenka skončí v peněžence a vybledne|📧 Faktury roztroušené po e-mailech|📱 Něco pošlete účetní přes WhatsApp|😰 Konec měsíce = večer hledání dokladů",
+        "cmp_app_items": "📸 Vyfotíte ji hned u pokladny|🧠 Appka rozpozná částku, DPH i dodavatele|🗂️ Vše je na jednom místě v telefonu|📤 Jedno kliknutí a účetní má celý balíček",
+        "cmp_closing": "Takhle vypadá 60 sekund místo hodin.",
         "btn_play": "📱 Stáhnout z Google Play (Android)",
         "btn_ios": "🍎 Stáhnout z App Store (iPhone)",
         "btn_how": "Jak to funguje?",
@@ -294,6 +308,13 @@ LANGS = {
         "hero_soft_row": "POHODA · Money S3 · MRP · OMEGA · OBERON · ISDOC",
         "privacy_strip_items": "Keine Cloud|Keine Registrierung|Kein Konto|Keine Datenweitergabe an uns",
         "privacy_strip_line": "Ihre Belege bleiben auf Ihrem Telefon. Den Export senden Sie mit einem Klick an die Buchhaltung.",
+        "cmp_label": "Kommt Ihnen das bekannt vor?",
+        "cmp_title": "Heute vs. mit RýchleÚčto",
+        "cmp_today_h": "Heute (ohne App)",
+        "cmp_app_h": "Mit RýchleÚčto",
+        "cmp_today_items": "📸 Der Beleg verblasst in der Geldbörse|📧 Rechnungen verstreut in E-Mails|📱 Etwas geht per WhatsApp an die Buchhaltung|😰 Monatsende = ein Abend Belege suchen",
+        "cmp_app_items": "📸 Direkt an der Kasse fotografiert|🧠 Die App erkennt Betrag, MwSt. und Lieferant|🗂️ Alles an einem Ort auf dem Telefon|📤 Ein Klick und die Buchhaltung hat das Paket",
+        "cmp_closing": "So sehen 60 Sekunden statt Stunden aus.",
         "btn_play": "📱 Bei Google Play laden (Android)",
         "btn_ios": "🍎 Im App Store laden (iPhone)",
         "btn_how": "So funktioniert's",
@@ -426,6 +447,13 @@ LANGS = {
         "hero_soft_row": "POHODA · Money S3 · MRP · OMEGA · OBERON · ISDOC",
         "privacy_strip_items": "No cloud|No registration|No account|No data shared with us",
         "privacy_strip_line": "Your documents stay on your phone. You send the export to your accountant with one click.",
+        "cmp_label": "Sound familiar?",
+        "cmp_title": "Today vs. with RýchleÚčto",
+        "cmp_today_h": "Today (without the app)",
+        "cmp_app_h": "With RýchleÚčto",
+        "cmp_today_items": "📸 The receipt fades away in your wallet|📧 Invoices scattered across e-mails|📱 Something goes to the accountant via WhatsApp|😰 End of month = an evening hunting documents",
+        "cmp_app_items": "📸 Snapped right at the till|🧠 The app reads amount, VAT and supplier|🗂️ Everything in one place on your phone|📤 One click and your accountant has the bundle",
+        "cmp_closing": "That is what 60 seconds instead of hours looks like.",
         "btn_play": "📱 Get it on Google Play (Android)",
         "btn_ios": "🍎 Download on the App Store (iPhone)",
         "btn_how": "How it works",
@@ -597,6 +625,25 @@ def faq_html(t: dict) -> str:
       </div>"""
         )
     return "\n".join(blocks)
+
+
+def compare_html(t: dict) -> str:
+    def col(items: str, cls: str, heading: str) -> str:
+        lis = "\n".join(
+            f'        <li>{i.strip()}</li>' for i in items.split("|")
+        )
+        return (
+            f'      <div class="cmp-col {cls}">\n'
+            f'        <h3>{heading}</h3>\n'
+            f'        <ul>\n{lis}\n        </ul>\n'
+            f'      </div>'
+        )
+
+    return (
+        col(t["cmp_today_items"], "cmp-today", t["cmp_today_h"])
+        + "\n"
+        + col(t["cmp_app_items"], "cmp-app", t["cmp_app_h"])
+    )
 
 
 def compat_html(t: dict) -> str:
@@ -772,6 +819,17 @@ def render(t: dict) -> str:
     <div class="hero-image">
       <img src="{p}hero.png" alt="{t['hero_alt']}" loading="eager" />
     </div>
+  </div>
+</section>
+
+<section id="porovnanie" class="cmp-bg">
+  <div class="section-inner">
+    <div class="section-label">{t['cmp_label']}</div>
+    <h2 class="section-title">{t['cmp_title']}</h2>
+    <div class="cmp-grid">
+{compare_html(t)}
+    </div>
+    <p class="cmp-closing">{t['cmp_closing']}</p>
   </div>
 </section>
 
