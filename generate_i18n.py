@@ -25,8 +25,11 @@ LANGS = {
         "nav_screens": "Aplikácia",
         "cta_nav": "Stiahnuť zadarmo",
         "badge": "🇸🇰 Vyvinuté na Slovensku",
-        "h1_html": "Doklady pre účtovníka<br/>za <span>60 sekúnd</span>",
-        "hero_p": "Odfoťte faktúry a bločky a pošlite ich účtovnej firme, ktorú už máte. Export do POHODA, Money S3, MRP a OMEGA — bez zmeny kancelárie a bez cloudu.",
+        "h1_html": "Už žiadne naháňanie<br/>dokladov <span>účtovníkom</span>",
+        "hero_p": "Odfotíte bloček či faktúru, RýchleÚčto ich spracuje. Na konci mesiaca pošlete všetko naraz účtovnej firme, ktorú už máte — bez zmeny kancelárie.",
+        "hero_soft_row": "POHODA · Money S3 · MRP · OMEGA · OBERON · ISDOC",
+        "privacy_strip_items": "Bez cloudu|Bez registrácie|Bez účtu|Bez zdieľania dát s nami",
+        "privacy_strip_line": "Doklady zostávajú vo vašom telefóne. Export pošlete účtovníkovi ľahko, jedným klikom.",
         "btn_play": "📱 Stiahnuť z Google Play (Android)",
         "btn_ios": "🍎 Stiahnuť z App Store (iPhone)",
         "btn_how": "Ako to funguje?",
@@ -120,18 +123,20 @@ LANGS = {
         "footer_country": "🇸🇰 Slovenská republika",
         "developed": "Vyvinuté s ❤️ od",
         "compat_label": "Kompatibilita",
-        "compat_title": "Export pre účtovné softvéry",
-        "compat_sub": "Mesačný balík obsahuje importné súbory pripravené pre bežné účtovné systémy.",
+        "compat_title": "Máte účtovníka? Nič meniť nemusíte.",
+        "compat_sub": "RýchleÚčto funguje s vaším existujúcim účtovným softvérom — mesačný balík obsahuje importné súbory pripravené presne preň.",
         "compat_items": [
-            ("Export do MRP XML 2.0", "/navod-importu/mrp.html"),
-            ("Export do POHODA XML", "/navod-importu/pohoda.html"),
-            ("Export do Money S3 XML", "/navod-importu/money-s3.html"),
-            ("Export do OMEGA (TXT)", "/navod-importu/omega.html"),
+            ("POHODA — XML", "/navod-importu/pohoda.html"),
+            ("Money S3 — XML", "/navod-importu/money-s3.html"),
+            ("MRP — XML 2.0", "/navod-importu/mrp.html"),
+            ("OMEGA — TXT", "/navod-importu/omega.html"),
+            ("OBERON — XML", "/navod-importu/"),
+            ("Ostatné softvéry — ISDOC a CSV", "/navod-importu/"),
         ],
         "nav_guides": "Návod importu",
-        "compat_cta": "Návod importu pre účtovníkov",
-        "compat_cta_sub": "Screenshoty a postup pre Money S3, MRP, OMEGA a POHODA.",
-        "trademark_disclaimer": "Názvy MRP, POHODA, Money S3 a OMEGA sú ochrannými známkami ich príslušných vlastníkov. Sú uvedené výlučne na označenie kompatibility aplikácie s podporovanými formátmi importu.",
+        "compat_cta": "Ukázať účtovníkovi, ako importovať doklady →",
+        "compat_cta_sub": "Screenshoty a postup pre POHODA, Money S3, MRP, OMEGA a OBERON.",
+        "trademark_disclaimer": "Názvy MRP, POHODA, Money S3, OMEGA a OBERON sú ochrannými známkami ich príslušných vlastníkov. Sú uvedené výlučne na označenie kompatibility aplikácie s podporovanými formátmi.",
     },
     "cs": {
         "code": "cs",
@@ -151,8 +156,11 @@ LANGS = {
         "nav_screens": "Aplikace",
         "cta_nav": "Stáhnout zdarma",
         "badge": "🇨🇿 Dostupné pro Česko",
-        "h1_html": "Doklady pro účetní<br/>za <span>60 sekund</span>",
-        "hero_p": "Vyfoťte faktury a účtenky a pošlete je účetní firmě, kterou už máte. Export do POHODA, Money S3, MRP a OMEGA — bez změny kanceláře a bez cloudu.",
+        "h1_html": "Už žádné nahánění<br/>dokladů <span>účetním</span>",
+        "hero_p": "Vyfotíte účtenku či fakturu, RýchleÚčto je zpracuje. Na konci měsíce pošlete vše najednou účetní firmě, kterou už máte — bez změny kanceláře.",
+        "hero_soft_row": "POHODA · Money S3 · MRP · OMEGA · OBERON · ISDOC",
+        "privacy_strip_items": "Bez cloudu|Bez registrace|Bez účtu|Bez sdílení dat s námi",
+        "privacy_strip_line": "Doklady zůstávají ve vašem telefonu. Export pošlete účetnímu snadno, jedním klikem.",
         "btn_play": "📱 Stáhnout z Google Play (Android)",
         "btn_ios": "🍎 Stáhnout z App Store (iPhone)",
         "btn_how": "Jak to funguje?",
@@ -246,18 +254,20 @@ LANGS = {
         "footer_country": "🇨🇿 Česká republika",
         "developed": "Vyvinuto s ❤️ od",
         "compat_label": "Kompatibilita",
-        "compat_title": "Export pro účetní softwary",
-        "compat_sub": "Měsíční balíček obsahuje importní soubory připravené pro běžné účetní systémy.",
+        "compat_title": "Máte účetní? Nic měnit nemusíte.",
+        "compat_sub": "RýchleÚčto funguje s vaším stávajícím účetním softwarem — měsíční balíček obsahuje importní soubory připravené přesně pro něj.",
         "compat_items": [
-            ("Export do MRP XML 2.0", "/navod-importu/mrp.html"),
-            ("Export do POHODA XML", "/navod-importu/pohoda.html"),
-            ("Export do Money S3 XML", "/navod-importu/money-s3.html"),
-            ("Export do OMEGA (TXT)", "/navod-importu/omega.html"),
+            ("POHODA — XML", "/navod-importu/pohoda.html"),
+            ("Money S3 — XML", "/navod-importu/money-s3.html"),
+            ("MRP — XML 2.0", "/navod-importu/mrp.html"),
+            ("OMEGA — TXT", "/navod-importu/omega.html"),
+            ("OBERON — XML", "/navod-importu/"),
+            ("Ostatní softwary — ISDOC a CSV", "/navod-importu/"),
         ],
         "nav_guides": "Návod importu",
-        "compat_cta": "Návod importu pro účetní",
-        "compat_cta_sub": "Screenshoty a postup pro Money S3, MRP, OMEGA a POHODA.",
-        "trademark_disclaimer": "Názvy MRP, POHODA, Money S3 a OMEGA jsou ochrannými známkami jejich příslušných vlastníků. Jsou uvedeny výhradně k označení kompatibility aplikace s podporovanými formáty importu.",
+        "compat_cta": "Ukázat účetnímu, jak importovat doklady →",
+        "compat_cta_sub": "Screenshoty a postup pro POHODA, Money S3, MRP, OMEGA a OBERON.",
+        "trademark_disclaimer": "Názvy MRP, POHODA, Money S3, OMEGA a OBERON jsou ochrannými známkami jejich příslušných vlastníků. Jsou uvedeny výhradně k označení kompatibility aplikace s podporovanými formáty.",
     },
     "de": {
         "code": "de",
@@ -277,8 +287,11 @@ LANGS = {
         "nav_screens": "App",
         "cta_nav": "Kostenlos laden",
         "badge": "🇩🇪 Für Deutschland & Österreich",
-        "h1_html": "Belege für die Buchhaltung<br/>in <span>60 Sekunden</span>",
-        "hero_p": "Fotografieren Sie Rechnungen und Belege und senden Sie sie an Ihre bestehende Buchhaltung. Export für gängige Formate — ohne Kanzleiwechsel und ohne Cloud-Zwang.",
+        "h1_html": "Schluss mit dem Hinterherlaufen<br/>bei <span>Belegen</span>",
+        "hero_p": "Beleg oder Rechnung fotografieren, RýchleÚčto verarbeitet sie. Am Monatsende senden Sie alles auf einmal an Ihre bestehende Buchhaltung — ohne Kanzleiwechsel.",
+        "hero_soft_row": "POHODA · Money S3 · MRP · OMEGA · OBERON · ISDOC",
+        "privacy_strip_items": "Keine Cloud|Keine Registrierung|Kein Konto|Keine Datenweitergabe an uns",
+        "privacy_strip_line": "Ihre Belege bleiben auf Ihrem Telefon. Den Export senden Sie mit einem Klick an die Buchhaltung.",
         "btn_play": "📱 Bei Google Play laden (Android)",
         "btn_ios": "🍎 Im App Store laden (iPhone)",
         "btn_how": "So funktioniert's",
@@ -372,18 +385,20 @@ LANGS = {
         "footer_country": "🇩🇪 Deutschland / 🇦🇹 Österreich",
         "developed": "Entwickelt mit ❤️ von",
         "compat_label": "Kompatibilität",
-        "compat_title": "Export für Buchhaltungssoftware",
-        "compat_sub": "Das Monatspaket enthält Importdateien für gängige Buchhaltungssysteme.",
+        "compat_title": "Sie haben eine Buchhaltung? Nichts muss sich ändern.",
+        "compat_sub": "RýchleÚčto arbeitet mit Ihrer bestehenden Buchhaltungssoftware — das Monatspaket enthält passgenaue Importdateien.",
         "compat_items": [
-            ("Export nach MRP XML 2.0", "/navod-importu/mrp.html"),
-            ("Export nach POHODA XML", "/navod-importu/pohoda.html"),
-            ("Export nach Money S3 XML", "/navod-importu/money-s3.html"),
-            ("Export nach OMEGA (TXT)", "/navod-importu/omega.html"),
+            ("POHODA — XML", "/navod-importu/pohoda.html"),
+            ("Money S3 — XML", "/navod-importu/money-s3.html"),
+            ("MRP — XML 2.0", "/navod-importu/mrp.html"),
+            ("OMEGA — TXT", "/navod-importu/omega.html"),
+            ("OBERON — XML", "/navod-importu/"),
+            ("Weitere Software — ISDOC und CSV", "/navod-importu/"),
         ],
         "nav_guides": "Importanleitung",
-        "compat_cta": "Importanleitung für Buchhalter",
-        "compat_cta_sub": "Screenshots und Anleitung für Money S3, MRP, OMEGA und POHODA.",
-        "trademark_disclaimer": "Die Namen MRP, POHODA, Money S3 und OMEGA sind Marken ihrer jeweiligen Inhaber. Sie dienen ausschließlich dem Hinweis auf die Kompatibilität der App mit den unterstützten Importformaten.",
+        "compat_cta": "Der Buchhaltung zeigen, wie der Import funktioniert →",
+        "compat_cta_sub": "Screenshots und Anleitung für POHODA, Money S3, MRP, OMEGA und OBERON.",
+        "trademark_disclaimer": "Die Namen MRP, POHODA, Money S3, OMEGA und OBERON sind Marken ihrer jeweiligen Inhaber. Sie dienen ausschließlich der Kennzeichnung der Kompatibilität mit den unterstützten Formaten.",
     },
     "en": {
         "code": "en",
@@ -403,8 +418,11 @@ LANGS = {
         "nav_screens": "App",
         "cta_nav": "Download free",
         "badge": "🌍 Available in 4 languages",
-        "h1_html": "Documents for your accountant<br/>in <span>60 seconds</span>",
-        "hero_p": "Photograph invoices and receipts and send them to the accountant you already have. Export-ready formats — no firm lock-in and no forced cloud.",
+        "h1_html": "No more chasing<br/>receipts for <span>your accountant</span>",
+        "hero_p": "Snap a receipt or invoice and RýchleÚčto processes it. At the end of the month you send everything at once to the accountant you already have — no switching firms.",
+        "hero_soft_row": "POHODA · Money S3 · MRP · OMEGA · OBERON · ISDOC",
+        "privacy_strip_items": "No cloud|No registration|No account|No data shared with us",
+        "privacy_strip_line": "Your documents stay on your phone. You send the export to your accountant with one click.",
         "btn_play": "📱 Get it on Google Play (Android)",
         "btn_ios": "🍎 Download on the App Store (iPhone)",
         "btn_how": "How it works",
@@ -498,18 +516,20 @@ LANGS = {
         "footer_country": "🌍 Europe",
         "developed": "Built with ❤️ by",
         "compat_label": "Compatibility",
-        "compat_title": "Export for accounting software",
-        "compat_sub": "The monthly bundle includes import files prepared for common accounting systems.",
+        "compat_title": "Already have an accountant? Change nothing.",
+        "compat_sub": "RýchleÚčto works with the accounting software your accountant already uses — the monthly bundle carries import files prepared exactly for it.",
         "compat_items": [
-            ("Export to MRP XML 2.0", "/navod-importu/mrp.html"),
-            ("Export to POHODA XML", "/navod-importu/pohoda.html"),
-            ("Export to Money S3 XML", "/navod-importu/money-s3.html"),
-            ("Export to OMEGA (TXT)", "/navod-importu/omega.html"),
+            ("POHODA — XML", "/navod-importu/pohoda.html"),
+            ("Money S3 — XML", "/navod-importu/money-s3.html"),
+            ("MRP — XML 2.0", "/navod-importu/mrp.html"),
+            ("OMEGA — TXT", "/navod-importu/omega.html"),
+            ("OBERON — XML", "/navod-importu/"),
+            ("Other software — ISDOC and CSV", "/navod-importu/"),
         ],
         "nav_guides": "Import guide",
-        "compat_cta": "Import guide for accountants",
-        "compat_cta_sub": "Screenshots and steps for Money S3, MRP, OMEGA and POHODA.",
-        "trademark_disclaimer": "MRP, POHODA, Money S3 and OMEGA are trademarks of their respective owners. They are used solely to indicate compatibility with the supported import formats.",
+        "compat_cta": "Show your accountant how to import →",
+        "compat_cta_sub": "Screenshots and steps for POHODA, Money S3, MRP, OMEGA and OBERON.",
+        "trademark_disclaimer": "MRP, POHODA, Money S3, OMEGA and OBERON are trademarks of their respective owners, referenced solely to indicate compatibility with the supported formats.",
     },
 }
 
@@ -681,6 +701,10 @@ def render(t: dict) -> str:
     p = t["prefix"]
     play = play_url(t["code"])
     ios = ios_url(t["code"])
+    privacy_items_html = "".join(
+        f'<span class="privacy-strip-item">{item.strip()}</span>'
+        for item in t["privacy_strip_items"].split("|")
+    )
     return f"""<!DOCTYPE html>
 <html lang="{t['html_lang']}">
 <head>
@@ -721,6 +745,13 @@ def render(t: dict) -> str:
   </div>
 </nav>
 
+<div class="privacy-strip">
+  <div class="privacy-strip-inner">
+    <div class="privacy-strip-items">{privacy_items_html}</div>
+    <div class="privacy-strip-line">{t['privacy_strip_line']}</div>
+  </div>
+</div>
+
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-text">
@@ -732,6 +763,7 @@ def render(t: dict) -> str:
         <a href="{ios}" class="btn btn-app-store btn-lg">{t['btn_ios']}</a>
         <a href="#ako-to-funguje" class="btn btn-outline btn-lg">{t['btn_how']}</a>
       </div>
+      <div class="hero-soft-row">{t['hero_soft_row']}</div>
     </div>
     <div class="hero-image">
       <img src="{p}hero.png" alt="{t['hero_alt']}" loading="eager" />
