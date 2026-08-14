@@ -56,7 +56,7 @@ LANGS = {
         "step3_t": "Odošlite účtovnej firme",
         "step3_p": "Koncom mesiaca jedným kliknutím odošlete všetky doklady. Email sa otvorí automaticky s prílohou.",
         "feat_label": "Funkcie",
-        "feat_title": "Všetko čo potrebujete",
+        "feat_title": "Všetko potrebné na odovzdanie dokladov účtovníkovi",
         "feat_sub": "RýchleÚčto robí nudnú administratívu za vás — aby ste sa mohli sústrediť na biznis.",
         "f1_t": "Inteligentné skenovanie",
         "f1_p": "Odfotografujte doklad v jednej alebo viacerých fotkách. OCR rozpozná dodávateľa, sumu a dátum.",
@@ -125,6 +125,7 @@ LANGS = {
         "compat_label": "Kompatibilita",
         "compat_title": "Máte účtovníka? Nič meniť nemusíte.",
         "compat_sub": "RýchleÚčto funguje s vaším existujúcim účtovným softvérom — mesačný balík obsahuje importné súbory pripravené presne preň.",
+        "compat_big": "Váš účtovník môže zostať tam, kde je.",
         "compat_items": [
             ("POHODA — XML", "/navod-importu/pohoda.html"),
             ("Money S3 — XML", "/navod-importu/money-s3.html"),
@@ -187,7 +188,7 @@ LANGS = {
         "step3_t": "Odešlete účetní firmě",
         "step3_p": "Koncem měsíce jedním klepnutím odešlete všechny doklady. E-mail se otevře automaticky s přílohou.",
         "feat_label": "Funkce",
-        "feat_title": "Vše, co potřebujete",
+        "feat_title": "Vše potřebné k předání dokladů účetnímu",
         "feat_sub": "ÚčtoSkenExport dělá nudnou administrativu za vás — abyste se mohli soustředit na byznys.",
         "f1_t": "Inteligentní skenování",
         "f1_p": "Vyfoťte doklad v jedné nebo více fotkách. OCR rozpozná dodavatele, částku a datum.",
@@ -256,6 +257,7 @@ LANGS = {
         "compat_label": "Kompatibilita",
         "compat_title": "Máte účetní? Nic měnit nemusíte.",
         "compat_sub": "RýchleÚčto funguje s vaším stávajícím účetním softwarem — měsíční balíček obsahuje importní soubory připravené přesně pro něj.",
+        "compat_big": "Váš účetní může zůstat tam, kde je.",
         "compat_items": [
             ("POHODA — XML", "/navod-importu/pohoda.html"),
             ("Money S3 — XML", "/navod-importu/money-s3.html"),
@@ -318,7 +320,7 @@ LANGS = {
         "step3_t": "An die Buchhaltung senden",
         "step3_p": "Am Monatsende senden Sie alle Belege mit einem Tippen. Die E-Mail öffnet sich mit Anhang.",
         "feat_label": "Funktionen",
-        "feat_title": "Alles, was Sie brauchen",
+        "feat_title": "Alles für die Belegübergabe an die Buchhaltung",
         "feat_sub": "SchnellBelegio übernimmt die Bürokratie — damit Sie sich aufs Business konzentrieren.",
         "f1_t": "Intelligentes Scannen",
         "f1_p": "Fotografieren Sie Belege in einem oder mehreren Fotos. OCR erkennt Lieferant, Betrag und Datum.",
@@ -387,6 +389,7 @@ LANGS = {
         "compat_label": "Kompatibilität",
         "compat_title": "Sie haben eine Buchhaltung? Nichts muss sich ändern.",
         "compat_sub": "RýchleÚčto arbeitet mit Ihrer bestehenden Buchhaltungssoftware — das Monatspaket enthält passgenaue Importdateien.",
+        "compat_big": "Ihre Buchhaltung bleibt, wo sie ist.",
         "compat_items": [
             ("POHODA — XML", "/navod-importu/pohoda.html"),
             ("Money S3 — XML", "/navod-importu/money-s3.html"),
@@ -449,7 +452,7 @@ LANGS = {
         "step3_t": "Send to your accountant",
         "step3_p": "At month end, send all documents in one tap. Email opens with the attachment ready.",
         "feat_label": "Features",
-        "feat_title": "Everything you need",
+        "feat_title": "Everything you need to hand documents to your accountant",
         "feat_sub": "Scan2Accountant handles the busywork — so you can focus on your business.",
         "f1_t": "Smart scanning",
         "f1_p": "Photograph documents in one or more shots. OCR reads supplier, amount and date.",
@@ -518,6 +521,7 @@ LANGS = {
         "compat_label": "Compatibility",
         "compat_title": "Already have an accountant? Change nothing.",
         "compat_sub": "RýchleÚčto works with the accounting software your accountant already uses — the monthly bundle carries import files prepared exactly for it.",
+        "compat_big": "Your accountant stays right where they are.",
         "compat_items": [
             ("POHODA — XML", "/navod-importu/pohoda.html"),
             ("Money S3 — XML", "/navod-importu/money-s3.html"),
@@ -852,6 +856,7 @@ def render(t: dict) -> str:
     <div class="section-label">{t['compat_label']}</div>
     <h2 class="section-title">{t['compat_title']}</h2>
     <p class="section-sub">{t['compat_sub']}</p>
+    <p class="compat-big">{t['compat_big']}</p>
 {compat_html(t)}
     <p class="trademark-disclaimer">{t['trademark_disclaimer']}</p>
   </div>
