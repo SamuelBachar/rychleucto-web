@@ -125,7 +125,7 @@ def omega_body() -> str:
 def pohoda_body() -> str:
     return f"""  <section class="guide-section">
     <h2>Postup importu</h2>
-    {images_html("pohoda", 1, "POHODA XML spracovanie")}
+    {images_html("pohoda", 5, "POHODA XML spracovanie")}
     <h2>Zahájenie XML spracovania</h2>
     <p>Na prvej strane sprievodcu najskôr vyberte typ XML spracovania, ktorým je definované, či bude vykonaný XML import/export jedného konkrétneho súboru alebo viacerých súborov. V prípade exportu konkrétneho XML súboru zaškrtnite voľbu <strong>Súbor</strong>. Výberom voľby <strong>Zložka</strong> určíte, že chcete vykonať import alebo export viacerých XML súborov naraz.</p>
     <p>V poli <strong>Vstupný priečinok alebo súbor (request)</strong> zvoľte cestu k XML súborom. V prípade, že ste vybrali možnosť Zložka, skontroluje POHODA všetky XML súbory v tejto zložke, a ak obsahujú platný dataPack, budú spracované.</p>
